@@ -17,14 +17,14 @@ const securityFeatures = [
   { title: "Role-Based Access Control", description: "Granular permissions aligned with your security policies." },
 ];
 
-export default function Technology() {
+export default function Framework() {
   return (
     <main className="flex flex-col pt-20">
       <section className="py-20 bg-navy-light">
         <div className="container mx-auto px-6 text-center">
-          <span className="enterprise-badge mb-6">Our Technology</span>
+          <span className="enterprise-badge mb-6">Our Proprietary Framework</span>
           <h1 className="text-display-lg text-foreground mt-4">The <span className="text-primary">InferenceAI™</span> Framework</h1>
-          <p className="mt-6 text-lg text-muted-foreground max-w-2xl mx-auto">A proprietary technology stack purpose-built for enterprise AI agents.</p>
+          <p className="mt-6 text-lg text-muted-foreground max-w-2xl mx-auto">A proprietary framework purpose-built for enterprise AI agents.</p>
         </div>
       </section>
 
