@@ -144,7 +144,11 @@ export default function Index() {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Left content */}
             <div className="animate-fade-in-up">
-              <p className="text-lg text-muted-foreground max-w-lg leading-relaxed">
+              <h1 className="text-display-lg lg:text-display-xl text-foreground leading-tight">
+                We Build Enterprise AI Agents.<br />
+                <span className="text-primary">At Scale.</span>
+              </h1>
+              <p className="mt-6 text-lg text-muted-foreground max-w-lg leading-relaxed">
                 Reimagine legacy systems and rev up automated workflows with 
                 the AI-powered platform for enterprise-grade transformation.
               </p>
@@ -182,11 +186,7 @@ export default function Index() {
       <section className="py-20 bg-background">
         <div className="container mx-auto px-6">
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="text-display-md text-foreground">
-              We Build Enterprise AI Agents.<br />
-              <span className="text-primary">At Scale.</span>
-            </h2>
-            <p className="mt-4 text-lg text-muted-foreground">
+            <p className="text-lg text-muted-foreground">
               Axiobot is an Enterprise AI Agents Factory. We design, build, and deploy autonomous agents that transform processes, accelerate compliance, and unlock high-value decision intelligence across entire organizations.
             </p>
           </div>
