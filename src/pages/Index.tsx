@@ -187,7 +187,7 @@ export default function Index() {
         <div className="container mx-auto px-6">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <p className="text-lg text-muted-foreground">
-              <span className="text-primary font-bold">Axiobot is an Enterprise AI Agents Factory.</span> We design, build, and deploy autonomous agents that transform processes, accelerate compliance, and unlock high-value decision intelligence across entire organizations.
+              <span className="text-accent font-bold">Axiobot is an Enterprise AI Agents Factory.</span> We design, build, and deploy autonomous agents that transform processes, accelerate compliance, and unlock high-value decision intelligence across entire organizations.
             </p>
           </div>
           
