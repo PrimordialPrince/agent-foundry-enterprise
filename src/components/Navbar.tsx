@@ -2,6 +2,7 @@ import { Link, useLocation } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
+import axiobitLogo from "@/assets/axiobit-logo.png";
 
 const navigation = [
   { name: "About", href: "/about" },
@@ -35,17 +36,9 @@ export function Navbar() {
       )}
     >
       <nav className="container mx-auto flex items-center justify-between px-6 py-4">
-        {/* Logo - AXIOBIT styled */}
+        {/* Logo */}
         <Link to="/" className="flex items-center">
-          <span className="text-2xl font-bold tracking-tight">
-            <span className="text-primary">△</span>
-            <span className="text-primary">X</span>
-            <span className="text-primary">I</span>
-            <span className="text-primary">O</span>
-            <span className="text-accent">B</span>
-            <span className="text-foreground">I</span>
-            <span className="text-foreground">T</span>
-          </span>
+          <img src={axiobitLogo} alt="Axiobit" className="h-8" />
         </Link>
 
         {/* Desktop Navigation */}
