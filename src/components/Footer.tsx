@@ -3,10 +3,10 @@ import { Linkedin, Twitter, Github, Mail } from "lucide-react";
 
 const footerLinks = {
   platform: [
-    { name: "Platform Overview", href: "/technology" },
-    { name: "InferenceAI™", href: "/technology" },
-    { name: "Security", href: "/technology" },
-    { name: "Integrations", href: "/technology" },
+    { name: "Platform Overview", href: "/framework" },
+    { name: "InferenceAI™", href: "/framework" },
+    { name: "Security", href: "/framework" },
+    { name: "Integrations", href: "/framework" },
   ],
   solutions: [
     { name: "WhappO", href: "/agents" },

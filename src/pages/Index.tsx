@@ -258,16 +258,16 @@ export default function Index() {
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             {/* Left content */}
             <div>
-              <span className="enterprise-badge mb-6">Technology</span>
+              <span className="enterprise-badge mb-6">Our Proprietary Framework</span>
               <h2 className="text-display-md text-foreground mt-4">
                 The InferenceAI™ <span className="text-primary">Framework</span>
               </h2>
               <p className="mt-4 text-lg text-muted-foreground leading-relaxed">
-                Our proprietary technology stack powers intelligent automation at enterprise scale, 
+                Our proprietary framework powers intelligent automation at enterprise scale, 
                 delivering results that transform operations.
               </p>
               <div className="mt-8">
-                <Link to="/technology">
+                <Link to="/framework">
                   <Button variant="enterprise-outline" size="lg">
                     Learn More
                     <ArrowRight className="ml-2 h-4 w-4" />
