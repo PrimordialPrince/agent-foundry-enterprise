@@ -191,7 +191,7 @@ export default function Index() {
               <span className="text-primary">At Scale.</span>
             </h2>
             <p className="mt-4 text-lg text-muted-foreground">
-              Axiobit is architected to run your most critical journeys. Explore our key solutions:
+              Axiobot is an Enterprise AI Agents Factory. We design, build, and deploy autonomous agents that transform processes, accelerate compliance, and unlock high-value decision intelligence across entire organizations.
             </p>
           </div>
           
