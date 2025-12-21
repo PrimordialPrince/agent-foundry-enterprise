@@ -176,9 +176,9 @@ export default function Index() {
         
         {/* Carousel bullets - positioned at bottom of hero */}
         <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 flex gap-3">
-          <button className="w-3 h-3 rounded-full bg-primary transition-all duration-300" aria-label="Slide 1" />
-          <button className="w-3 h-3 rounded-full bg-foreground/30 hover:bg-foreground/50 transition-all duration-300" aria-label="Slide 2" />
-          <button className="w-3 h-3 rounded-full bg-foreground/30 hover:bg-foreground/50 transition-all duration-300" aria-label="Slide 3" />
+          <button className="w-3 h-3 rounded-full bg-white transition-all duration-300" aria-label="Slide 1" />
+          <button className="w-3 h-3 rounded-full bg-white/40 hover:bg-white/60 transition-all duration-300" aria-label="Slide 2" />
+          <button className="w-3 h-3 rounded-full bg-white/40 hover:bg-white/60 transition-all duration-300" aria-label="Slide 3" />
         </div>
       </section>
 
