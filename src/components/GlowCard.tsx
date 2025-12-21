@@ -1,50 +1,33 @@
 import { cn } from "@/lib/utils";
-import { ReactNode } from "react";
 
 interface GlowCardProps {
-  children: ReactNode;
+  children: React.ReactNode;
   className?: string;
-  glowColor?: "primary" | "accent" | "success";
-  hover?: boolean;
+  glowColor?: "primary" | "accent";
 }
 
-export function GlowCard({ 
-  children, 
-  className, 
-  glowColor = "primary",
-  hover = true 
-}: GlowCardProps) {
-  const glowClasses = {
-    primary: "hover:shadow-[0_0_30px_hsl(var(--glow-primary)/0.2)]",
-    accent: "hover:shadow-[0_0_30px_hsl(var(--glow-accent)/0.2)]",
-    success: "hover:shadow-[0_0_30px_hsl(var(--glow-success)/0.2)]",
-  };
-
-  const borderClasses = {
-    primary: "before:from-primary before:to-accent",
-    accent: "before:from-accent before:to-primary",
-    success: "before:from-glow-success before:to-primary",
-  };
-
+export function GlowCard({ children, className, glowColor = "primary" }: GlowCardProps) {
   return (
     <div
       className={cn(
-        "relative rounded-xl bg-card border border-border/50 overflow-hidden transition-all duration-300",
-        hover && glowClasses[glowColor],
-        hover && "hover:border-primary/30 hover:-translate-y-1",
+        "relative rounded-2xl overflow-hidden transition-all duration-500",
+        "bg-card/80 backdrop-blur-xl border border-border/50",
+        "hover:border-transparent group",
+        glowColor === "primary" 
+          ? "hover:shadow-[0_0_30px_hsl(var(--glow-primary)/0.2)]"
+          : "hover:shadow-[0_0_30px_hsl(var(--glow-accent)/0.2)]",
         className
       )}
     >
-      {/* Gradient border effect */}
-      <div className={cn(
-        "absolute inset-0 rounded-xl opacity-0 transition-opacity duration-300",
-        hover && "group-hover:opacity-100",
-        "before:absolute before:inset-0 before:rounded-xl before:p-[1px]",
-        "before:bg-gradient-to-br",
-        borderClasses[glowColor],
-        "before:-z-10"
-      )} />
-      {children}
+      <div 
+        className={cn(
+          "absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 p-[1px]",
+          glowColor === "primary" 
+            ? "bg-gradient-to-br from-primary/50 via-primary/20 to-transparent"
+            : "bg-gradient-to-br from-accent/50 via-accent/20 to-transparent"
+        )}
+      />
+      <div className="relative z-10 h-full">{children}</div>
     </div>
   );
 }

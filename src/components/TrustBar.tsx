@@ -1,33 +1,16 @@
-import { cn } from "@/lib/utils";
+export function TrustBar() {
+  const companies = ["Microsoft", "Google Cloud", "AWS", "Salesforce", "SAP", "Oracle"];
 
-interface TrustBarProps {
-  className?: string;
-}
-
-const logos = [
-  "Fortune 500 Companies",
-  "Global Enterprises",
-  "Industry Leaders",
-  "Government Agencies",
-  "Financial Institutions",
-];
-
-export function TrustBar({ className }: TrustBarProps) {
   return (
-    <div className={cn("py-12 border-y border-border/50", className)}>
+    <div className="py-12 border-y border-border/30 bg-card/20">
       <div className="container mx-auto px-6">
-        <p className="text-center text-sm text-muted-foreground mb-8">
-          Trusted by leading enterprises worldwide
+        <p className="text-center text-sm text-muted-foreground mb-8 uppercase tracking-widest font-medium">
+          Trusted by industry leaders
         </p>
-        <div className="flex flex-wrap items-center justify-center gap-8 md:gap-16">
-          {logos.map((name, index) => (
-            <div
-              key={index}
-              className="flex items-center justify-center h-12 px-6 rounded-lg bg-muted/30 border border-border/50"
-            >
-              <span className="text-sm font-medium text-muted-foreground">
-                {name}
-              </span>
+        <div className="flex flex-wrap items-center justify-center gap-x-12 gap-y-6">
+          {companies.map((company) => (
+            <div key={company} className="text-muted-foreground/50 hover:text-muted-foreground transition-colors text-lg font-semibold">
+              {company}
             </div>
           ))}
         </div>
