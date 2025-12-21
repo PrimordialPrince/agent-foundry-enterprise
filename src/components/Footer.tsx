@@ -2,29 +2,29 @@ import { Link } from "react-router-dom";
 import { Linkedin, Twitter, Github, Mail } from "lucide-react";
 
 const footerLinks = {
-  product: [
-    { name: "Agents", href: "/agents" },
-    { name: "Technology", href: "/technology" },
+  platform: [
+    { name: "Platform Overview", href: "/technology" },
+    { name: "InferenceAI™", href: "/technology" },
+    { name: "Security", href: "/technology" },
+    { name: "Integrations", href: "/technology" },
+  ],
+  solutions: [
+    { name: "WhappO", href: "/agents" },
+    { name: "yCarbon", href: "/agents" },
+    { name: "Arheion", href: "/agents" },
+    { name: "Custom Solutions", href: "/contact" },
+  ],
+  resources: [
+    { name: "Documentation", href: "/resources" },
     { name: "Case Studies", href: "/case-studies" },
-    { name: "Pricing", href: "/contact" },
+    { name: "Blog", href: "/resources" },
+    { name: "Whitepapers", href: "/resources" },
   ],
   company: [
     { name: "About", href: "/about" },
     { name: "Careers", href: "/about" },
     { name: "Contact", href: "/contact" },
     { name: "Partners", href: "/contact" },
-  ],
-  resources: [
-    { name: "Documentation", href: "/resources" },
-    { name: "Blog", href: "/resources" },
-    { name: "Whitepapers", href: "/resources" },
-    { name: "API Reference", href: "/resources" },
-  ],
-  legal: [
-    { name: "Privacy Policy", href: "/privacy" },
-    { name: "Terms of Service", href: "/terms" },
-    { name: "Security", href: "/security" },
-    { name: "Compliance", href: "/compliance" },
   ],
 };
 
@@ -37,18 +37,16 @@ const socialLinks = [
 
 export function Footer() {
   return (
-    <footer className="border-t border-border/50 bg-card/50">
+    <footer className="border-t border-border bg-background">
       <div className="container mx-auto px-6 py-16">
         <div className="grid grid-cols-2 gap-8 md:grid-cols-4 lg:grid-cols-5">
           {/* Brand */}
           <div className="col-span-2 lg:col-span-1">
-            <Link to="/" className="flex items-center gap-3">
-              <div className="relative h-10 w-10 rounded-lg bg-gradient-to-br from-primary to-accent p-0.5">
-                <div className="flex h-full w-full items-center justify-center rounded-[7px] bg-background">
-                  <span className="text-lg font-bold gradient-text">A</span>
-                </div>
+            <Link to="/" className="flex items-center gap-2">
+              <div className="h-8 w-8 rounded bg-primary flex items-center justify-center">
+                <span className="text-lg font-bold text-primary-foreground">A</span>
               </div>
-              <span className="text-xl font-semibold tracking-tight">Axiobit</span>
+              <span className="text-xl font-bold text-foreground">Axiobit</span>
             </Link>
             <p className="mt-4 text-sm text-muted-foreground max-w-xs">
               Building enterprise AI agents that transform how organizations operate at scale.
@@ -69,9 +67,9 @@ export function Footer() {
 
           {/* Links */}
           <div>
-            <h3 className="text-sm font-semibold text-foreground">Product</h3>
+            <h3 className="text-sm font-semibold text-foreground">Platform</h3>
             <ul className="mt-4 space-y-3">
-              {footerLinks.product.map((item) => (
+              {footerLinks.platform.map((item) => (
                 <li key={item.name}>
                   <Link
                     to={item.href}
@@ -85,9 +83,9 @@ export function Footer() {
           </div>
 
           <div>
-            <h3 className="text-sm font-semibold text-foreground">Company</h3>
+            <h3 className="text-sm font-semibold text-foreground">Solutions</h3>
             <ul className="mt-4 space-y-3">
-              {footerLinks.company.map((item) => (
+              {footerLinks.solutions.map((item) => (
                 <li key={item.name}>
                   <Link
                     to={item.href}
@@ -117,9 +115,9 @@ export function Footer() {
           </div>
 
           <div>
-            <h3 className="text-sm font-semibold text-foreground">Legal</h3>
+            <h3 className="text-sm font-semibold text-foreground">Company</h3>
             <ul className="mt-4 space-y-3">
-              {footerLinks.legal.map((item) => (
+              {footerLinks.company.map((item) => (
                 <li key={item.name}>
                   <Link
                     to={item.href}
@@ -134,15 +132,14 @@ export function Footer() {
         </div>
 
         {/* Bottom */}
-        <div className="mt-12 pt-8 border-t border-border/50 flex flex-col md:flex-row items-center justify-between gap-4">
+        <div className="mt-12 pt-8 border-t border-border flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-sm text-muted-foreground">
             © {new Date().getFullYear()} Axiobit. All rights reserved.
           </p>
-          <div className="flex items-center gap-6">
-            <span className="flex items-center gap-2 text-sm text-muted-foreground">
-              <span className="h-2 w-2 rounded-full bg-glow-success animate-pulse" />
-              All systems operational
-            </span>
+          <div className="flex items-center gap-6 text-sm text-muted-foreground">
+            <Link to="/privacy" className="hover:text-foreground transition-colors">Privacy</Link>
+            <Link to="/terms" className="hover:text-foreground transition-colors">Terms</Link>
+            <Link to="/security" className="hover:text-foreground transition-colors">Security</Link>
           </div>
         </div>
       </div>
