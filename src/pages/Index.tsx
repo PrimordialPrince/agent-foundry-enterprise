@@ -172,6 +172,13 @@ export default function Index() {
               <HeroIllustration />
             </div>
           </div>
+          
+          {/* Carousel bullets */}
+          <div className="flex justify-center gap-2 mt-12">
+            <button className="w-3 h-3 rounded-full bg-primary transition-all duration-300" aria-label="Slide 1" />
+            <button className="w-3 h-3 rounded-full bg-foreground/30 hover:bg-foreground/50 transition-all duration-300" aria-label="Slide 2" />
+            <button className="w-3 h-3 rounded-full bg-foreground/30 hover:bg-foreground/50 transition-all duration-300" aria-label="Slide 3" />
+          </div>
         </div>
       </section>
 
