@@ -11,8 +11,8 @@ const solutions = [
     href: "/agents",
   },
   {
-    title: "yCarbon",
-    description: "Autonomous carbon footprint tracking and ESG compliance for enterprise sustainability goals.",
+    title: "Bizzfuse",
+    description: "AI-powered business process automation that seamlessly connects your enterprise systems and workflows.",
     href: "/agents",
   },
   {
@@ -266,7 +266,7 @@ export default function Index() {
                 Fortune 100 Achieves Net Zero Tracking
               </h3>
               <p className="mt-3 text-muted-foreground">
-                yCarbon enabled real-time carbon tracking across 50+ facilities, 
+                Bizzfuse enabled seamless integration across 50+ enterprise systems, 
                 accelerating sustainability goals.
               </p>
               <div className="flex gap-8 mt-6">
