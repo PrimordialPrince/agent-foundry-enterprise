@@ -187,7 +187,8 @@ export default function Index() {
         <div className="container mx-auto px-6">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <h2 className="text-display-md text-foreground">
-              Enterprise solutions, <span className="text-primary">at the ready</span>
+              We Build Enterprise AI Agents.<br />
+              <span className="text-primary">At Scale.</span>
             </h2>
             <p className="mt-4 text-lg text-muted-foreground">
               Axiobit is architected to run your most critical journeys. Explore our key solutions:
