@@ -144,11 +144,7 @@ export default function Index() {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Left content */}
             <div className="animate-fade-in-up">
-              <h1 className="text-display-lg lg:text-display-xl text-foreground leading-tight">
-                We Build Enterprise AI Agents.<br />
-                <span className="text-primary">At Scale.</span>
-              </h1>
-              <p className="mt-6 text-lg text-muted-foreground max-w-lg leading-relaxed">
+              <p className="text-lg text-muted-foreground max-w-lg leading-relaxed">
                 Reimagine legacy systems and rev up automated workflows with 
                 the AI-powered platform for enterprise-grade transformation.
               </p>
