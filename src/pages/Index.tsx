@@ -66,11 +66,79 @@ export default function Index() {
     <main className="flex flex-col">
       {/* Hero Section - Pega inspired */}
       <section className="relative min-h-[85vh] flex items-center bg-background overflow-hidden">
-        {/* Diagonal stripe accent */}
-        <div className="absolute left-0 top-0 bottom-0 w-1/2 diagonal-stripes opacity-50" />
+        {/* Left dark background with angular clip */}
+        <div className="absolute left-0 top-0 bottom-0 w-[55%] bg-navy-light z-[1]" style={{ clipPath: 'polygon(0 0, 100% 0, 85% 100%, 0 100%)' }} />
         
-        {/* Angular shape overlay */}
-        <div className="absolute left-0 top-0 bottom-0 w-[55%] bg-navy-light" style={{ clipPath: 'polygon(0 0, 100% 0, 85% 100%, 0 100%)' }} />
+        {/* Right teal network globe background */}
+        <div className="absolute right-0 top-0 bottom-0 w-1/2 lg:w-[50%] overflow-hidden">
+          {/* Gradient background */}
+          <div className="absolute inset-0 bg-gradient-to-br from-primary via-primary/90 to-[hsl(180,70%,45%)]" />
+          
+          {/* Network Globe SVG */}
+          <svg 
+            className="absolute inset-0 w-full h-full opacity-60" 
+            viewBox="0 0 400 500" 
+            preserveAspectRatio="xMidYMid slice"
+          >
+            {/* Globe outline curves */}
+            <ellipse cx="200" cy="250" rx="180" ry="180" fill="none" stroke="rgba(255,255,255,0.2)" strokeWidth="0.5" />
+            <ellipse cx="200" cy="250" rx="180" ry="100" fill="none" stroke="rgba(255,255,255,0.15)" strokeWidth="0.5" />
+            <ellipse cx="200" cy="250" rx="100" ry="180" fill="none" stroke="rgba(255,255,255,0.15)" strokeWidth="0.5" />
+            
+            {/* Network connection lines - top */}
+            <line x1="200" y1="70" x2="300" y2="130" stroke="rgba(255,255,255,0.3)" strokeWidth="0.5" />
+            <line x1="300" y1="130" x2="350" y2="200" stroke="rgba(255,255,255,0.3)" strokeWidth="0.5" />
+            <line x1="200" y1="70" x2="120" y2="110" stroke="rgba(255,255,255,0.25)" strokeWidth="0.5" />
+            <line x1="120" y1="110" x2="70" y2="180" stroke="rgba(255,255,255,0.25)" strokeWidth="0.5" />
+            <line x1="300" y1="130" x2="120" y2="110" stroke="rgba(255,255,255,0.2)" strokeWidth="0.5" />
+            
+            {/* Middle region */}
+            <line x1="70" y1="180" x2="50" y2="250" stroke="rgba(255,255,255,0.3)" strokeWidth="0.5" />
+            <line x1="350" y1="200" x2="380" y2="280" stroke="rgba(255,255,255,0.3)" strokeWidth="0.5" />
+            <line x1="70" y1="180" x2="150" y2="230" stroke="rgba(255,255,255,0.25)" strokeWidth="0.5" />
+            <line x1="150" y1="230" x2="260" y2="240" stroke="rgba(255,255,255,0.2)" strokeWidth="0.5" />
+            <line x1="260" y1="240" x2="350" y2="200" stroke="rgba(255,255,255,0.25)" strokeWidth="0.5" />
+            
+            {/* Lower region */}
+            <line x1="50" y1="250" x2="90" y2="340" stroke="rgba(255,255,255,0.3)" strokeWidth="0.5" />
+            <line x1="380" y1="280" x2="330" y2="370" stroke="rgba(255,255,255,0.3)" strokeWidth="0.5" />
+            <line x1="90" y1="340" x2="170" y2="400" stroke="rgba(255,255,255,0.25)" strokeWidth="0.5" />
+            <line x1="170" y1="400" x2="270" y2="410" stroke="rgba(255,255,255,0.2)" strokeWidth="0.5" />
+            <line x1="270" y1="410" x2="330" y2="370" stroke="rgba(255,255,255,0.25)" strokeWidth="0.5" />
+            <line x1="150" y1="230" x2="90" y2="340" stroke="rgba(255,255,255,0.15)" strokeWidth="0.5" />
+            <line x1="260" y1="240" x2="330" y2="370" stroke="rgba(255,255,255,0.15)" strokeWidth="0.5" />
+            
+            {/* Cross connections */}
+            <line x1="120" y1="110" x2="150" y2="230" stroke="rgba(255,255,255,0.2)" strokeWidth="0.5" />
+            <line x1="300" y1="130" x2="260" y2="240" stroke="rgba(255,255,255,0.2)" strokeWidth="0.5" />
+            <line x1="170" y1="400" x2="200" y2="430" stroke="rgba(255,255,255,0.25)" strokeWidth="0.5" />
+            <line x1="270" y1="410" x2="200" y2="430" stroke="rgba(255,255,255,0.25)" strokeWidth="0.5" />
+            
+            {/* Network nodes */}
+            <circle cx="200" cy="70" r="5" fill="rgba(255,255,255,0.7)" />
+            <circle cx="300" cy="130" r="4" fill="rgba(255,255,255,0.6)" />
+            <circle cx="120" cy="110" r="4" fill="rgba(255,255,255,0.5)" />
+            <circle cx="70" cy="180" r="5" fill="rgba(255,255,255,0.6)" />
+            <circle cx="350" cy="200" r="4" fill="rgba(255,255,255,0.5)" />
+            <circle cx="50" cy="250" r="4" fill="rgba(255,255,255,0.5)" />
+            <circle cx="380" cy="280" r="5" fill="rgba(255,255,255,0.6)" />
+            <circle cx="150" cy="230" r="4" fill="rgba(255,255,255,0.4)" />
+            <circle cx="260" cy="240" r="4" fill="rgba(255,255,255,0.4)" />
+            <circle cx="90" cy="340" r="5" fill="rgba(255,255,255,0.6)" />
+            <circle cx="330" cy="370" r="4" fill="rgba(255,255,255,0.5)" />
+            <circle cx="170" cy="400" r="4" fill="rgba(255,255,255,0.5)" />
+            <circle cx="270" cy="410" r="5" fill="rgba(255,255,255,0.6)" />
+            <circle cx="200" cy="430" r="4" fill="rgba(255,255,255,0.5)" />
+            
+            {/* Additional scattered nodes */}
+            <circle cx="30" cy="200" r="3" fill="rgba(255,255,255,0.3)" />
+            <circle cx="390" cy="230" r="3" fill="rgba(255,255,255,0.4)" />
+            <circle cx="100" cy="290" r="3" fill="rgba(255,255,255,0.3)" />
+            <circle cx="310" cy="310" r="3" fill="rgba(255,255,255,0.4)" />
+            <circle cx="230" cy="170" r="3" fill="rgba(255,255,255,0.3)" />
+            <circle cx="180" cy="300" r="3" fill="rgba(255,255,255,0.3)" />
+          </svg>
+        </div>
         
         <div className="container mx-auto px-6 py-20 relative z-10">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
