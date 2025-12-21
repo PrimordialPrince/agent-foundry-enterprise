@@ -69,8 +69,8 @@ export default function Index() {
         {/* Left dark background with angular clip */}
         <div className="absolute left-0 top-0 bottom-0 w-[55%] bg-navy-light z-[1]" style={{ clipPath: 'polygon(0 0, 100% 0, 85% 100%, 0 100%)' }} />
         
-        {/* Right teal network globe background */}
-        <div className="absolute right-0 top-0 bottom-0 w-1/2 lg:w-[50%] overflow-hidden">
+        {/* Right teal network globe background - extends behind the angular overlay */}
+        <div className="absolute right-0 top-0 bottom-0 w-full overflow-hidden">
           {/* Gradient background */}
           <div className="absolute inset-0 bg-gradient-to-br from-primary via-primary/90 to-[hsl(180,70%,45%)]" />
           
