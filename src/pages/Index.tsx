@@ -149,8 +149,7 @@ export default function Index() {
                 <span className="text-primary">At Scale.</span>
               </h1>
               <p className="mt-6 text-lg text-muted-foreground max-w-lg leading-relaxed">
-                Reimagine legacy systems and rev up automated workflows with 
-                the AI-powered platform for enterprise-grade transformation.
+                Power enterprises with AI agents built to streamline workflows, meet regulatory demands, and support high-impact decisions at scale.
               </p>
               <div className="mt-8 flex flex-wrap gap-4">
                 <Link to="/agents">
