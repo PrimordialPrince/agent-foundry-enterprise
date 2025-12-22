@@ -3,6 +3,7 @@ import { ArrowRight, Bot, Brain, Shield, Zap, Globe, Users, BarChart3, CheckCirc
 import { Button } from "@/components/ui/button";
 import { SolutionCard } from "@/components/SolutionCard";
 import { HeroIllustration } from "@/components/HeroIllustration";
+import vectorBg from "@/assets/vector-bg.png";
 
 const solutions = [
   {
@@ -182,8 +183,17 @@ export default function Index() {
       </section>
 
       {/* Solutions Section */}
-      <section className="py-20 bg-background">
-        <div className="container mx-auto px-6">
+      <section className="py-20 bg-background relative overflow-hidden">
+        {/* Vector background layer */}
+        <div 
+          className="absolute inset-0 opacity-30 pointer-events-none"
+          style={{
+            backgroundImage: `url(${vectorBg})`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+          }}
+        />
+        <div className="container mx-auto px-6 relative z-10">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <p className="text-lg text-muted-foreground">
               <span className="text-accent font-bold">Axiobot is an Enterprise AI Agents Factory.</span> We design, build, and deploy autonomous agents that transform processes, accelerate compliance, and unlock high-value decision intelligence across entire organizations.
