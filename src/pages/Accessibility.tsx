@@ -72,10 +72,9 @@ export default function Accessibility() {
               <p className="text-muted-foreground leading-relaxed mb-4">
                 We welcome your feedback on the accessibility of our website. If you encounter accessibility barriers or have suggestions for improvement, please contact us:
               </p>
-              <ul className="list-none text-muted-foreground space-y-2">
-                <li><strong className="text-foreground">Email:</strong> accessibility@axiobit.com</li>
-                <li><strong className="text-foreground">Phone:</strong> +1 (555) 123-4567</li>
-              </ul>
+              <p className="text-muted-foreground">
+                <strong className="text-foreground">Email:</strong> info@axiobit.com
+              </p>
               <p className="text-muted-foreground leading-relaxed mt-4">
                 We aim to respond to accessibility feedback within 5 business days.
               </p>
