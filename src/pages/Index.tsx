@@ -356,8 +356,20 @@ export default function Index() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-navy-light">
-        <div className="container mx-auto px-6">
+      <section className="py-20 bg-navy-light relative overflow-hidden">
+        {/* Parallax background layer */}
+        <div 
+          className="absolute inset-0 opacity-15 pointer-events-none will-change-transform"
+          style={{
+            backgroundImage: `url(${networkGlobeBg})`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center bottom',
+            transform: `translateY(${-parallaxOffset * 0.2}px)`,
+            height: '150%',
+            top: '-25%',
+          }}
+        />
+        <div className="container mx-auto px-6 relative z-10">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-display-md text-foreground">
               Ready to Transform Your <span className="text-primary">Enterprise?</span>
