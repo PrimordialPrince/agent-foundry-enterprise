@@ -81,7 +81,7 @@ export default function Index() {
   return (
     <main className="flex flex-col">
       {/* Hero Section - Pega inspired */}
-      <section className="relative min-h-[85vh] flex items-center bg-background overflow-hidden">
+      <section id="hero" className="relative min-h-[85vh] flex items-center bg-background overflow-hidden">
         {/* Left dark background with angular clip */}
         <div className="absolute left-0 top-0 bottom-0 w-[55%] bg-navy-light z-[1]" style={{ clipPath: 'polygon(0 0, 100% 0, 85% 100%, 0 100%)' }} />
         
@@ -146,16 +146,16 @@ export default function Index() {
           </div>
         </div>
         
-        {/* Carousel bullets - positioned at bottom of hero */}
+        {/* Scroll navigation bullets - positioned at bottom of hero */}
         <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 flex gap-3">
-          <button className="w-3 h-3 rounded-full bg-white transition-all duration-300" aria-label="Slide 1" />
-          <button className="w-3 h-3 rounded-full bg-white/40 hover:bg-white/60 transition-all duration-300" aria-label="Slide 2" />
-          <button className="w-3 h-3 rounded-full bg-white/40 hover:bg-white/60 transition-all duration-300" aria-label="Slide 3" />
+          <a href="#solutions" className="w-3 h-3 rounded-full bg-white hover:bg-accent hover:scale-125 transition-all duration-300" aria-label="Go to Solutions" />
+          <a href="#capabilities" className="w-3 h-3 rounded-full bg-white/40 hover:bg-accent hover:scale-125 transition-all duration-300" aria-label="Go to Capabilities" />
+          <a href="#case-studies" className="w-3 h-3 rounded-full bg-white/40 hover:bg-accent hover:scale-125 transition-all duration-300" aria-label="Go to Case Studies" />
         </div>
       </section>
 
       {/* Solutions Section */}
-      <section className="py-20 bg-background relative overflow-hidden">
+      <section id="solutions" className="py-20 bg-background relative overflow-hidden scroll-mt-20">
         {/* Parallax background layer */}
         <div 
           className="absolute inset-0 opacity-20 pointer-events-none will-change-transform"
@@ -206,7 +206,7 @@ export default function Index() {
       </section>
 
       {/* Metrics Section */}
-      <section className="py-16 bg-navy-light border-y border-border">
+      <section id="metrics" className="py-16 bg-navy-light border-y border-border scroll-mt-20">
         <div className="container mx-auto px-6">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {metrics.map((metric, index) => (
@@ -220,7 +220,7 @@ export default function Index() {
       </section>
 
       {/* Trust Bar - Client Logos */}
-      <section className="py-12 bg-background border-b border-border">
+      <section id="clients" className="py-12 bg-background border-b border-border scroll-mt-20">
         <div className="container mx-auto px-6">
           <p className="text-center text-sm text-muted-foreground mb-8">
             Trusted by leading enterprises worldwide
@@ -239,7 +239,7 @@ export default function Index() {
       </section>
 
       {/* Capabilities Section */}
-      <section className="py-20 bg-background">
+      <section id="capabilities" className="py-20 bg-background scroll-mt-20">
         <div className="container mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             {/* Left content */}
@@ -282,7 +282,7 @@ export default function Index() {
       </section>
 
       {/* Case Studies Section */}
-      <section className="py-20 section-gradient">
+      <section id="case-studies" className="py-20 section-gradient scroll-mt-20">
         <div className="container mx-auto px-6">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <span className="enterprise-badge mb-6">Case Studies</span>
@@ -356,7 +356,7 @@ export default function Index() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-navy-light relative overflow-hidden">
+      <section id="cta" className="py-20 bg-navy-light relative overflow-hidden scroll-mt-20">
         {/* Parallax background layer */}
         <div 
           className="absolute inset-0 opacity-15 pointer-events-none will-change-transform"
