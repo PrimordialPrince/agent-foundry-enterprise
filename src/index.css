@@ -119,8 +119,8 @@
   }
 
   .enterprise-card:hover {
-    @apply border-primary/40;
-    box-shadow: 0 4px 20px hsl(var(--primary) / 0.1);
+    @apply border-accent/60;
+    box-shadow: 0 4px 20px hsl(var(--accent) / 0.15);
   }
 
   /* Diagonal stripe pattern (Pega-inspired) */
@@ -153,7 +153,7 @@
 
   /* Subtle glow for hover states */
   .hover-glow:hover {
-    box-shadow: 0 4px 24px hsl(var(--primary) / 0.15);
+    box-shadow: 0 4px 24px hsl(var(--accent) / 0.2);
   }
 
   /* Section backgrounds */
