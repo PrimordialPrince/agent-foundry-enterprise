@@ -186,7 +186,7 @@ export default function Index() {
       <section className="py-20 bg-background relative overflow-hidden">
         {/* Vector background layer */}
         <div 
-          className="absolute inset-0 opacity-30 pointer-events-none"
+          className="absolute inset-0 opacity-15 pointer-events-none"
           style={{
             backgroundImage: `url(${vectorBg})`,
             backgroundSize: 'cover',
@@ -195,7 +195,7 @@ export default function Index() {
         />
         <div className="container mx-auto px-6 relative z-10">
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <p className="text-lg text-muted-foreground">
+            <p className="text-lg text-foreground/90">
               <span className="text-accent font-bold">Axiobot is an Enterprise AI Agents Factory.</span> We design, build, and deploy autonomous agents that transform processes, accelerate compliance, and unlock high-value decision intelligence across entire organizations.
             </p>
           </div>
