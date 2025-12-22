@@ -13,6 +13,11 @@ import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Resources from "./pages/Resources";
 import NotFound from "./pages/NotFound";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
+import CookiePolicy from "./pages/CookiePolicy";
+import TermsOfService from "./pages/TermsOfService";
+import Accessibility from "./pages/Accessibility";
+import Imprint from "./pages/Imprint";
 
 const queryClient = new QueryClient();
 
@@ -31,6 +36,11 @@ const App = () => (
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/resources" element={<Resources />} />
+          <Route path="/privacy" element={<PrivacyPolicy />} />
+          <Route path="/cookies" element={<CookiePolicy />} />
+          <Route path="/terms" element={<TermsOfService />} />
+          <Route path="/accessibility" element={<Accessibility />} />
+          <Route path="/imprint" element={<Imprint />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

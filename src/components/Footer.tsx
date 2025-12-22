@@ -136,10 +136,12 @@ export function Footer() {
           <p className="text-sm text-muted-foreground">
             © {new Date().getFullYear()} Axiobit. All rights reserved.
           </p>
-          <div className="flex items-center gap-6 text-sm text-muted-foreground">
-            <Link to="/privacy" className="hover:text-foreground transition-colors">Privacy</Link>
-            <Link to="/terms" className="hover:text-foreground transition-colors">Terms</Link>
-            <Link to="/security" className="hover:text-foreground transition-colors">Security</Link>
+          <div className="flex flex-wrap items-center justify-center md:justify-end gap-4 md:gap-6 text-sm text-muted-foreground">
+            <Link to="/privacy" className="hover:text-foreground transition-colors">Privacy Policy</Link>
+            <Link to="/cookies" className="hover:text-foreground transition-colors">Cookie Policy</Link>
+            <Link to="/terms" className="hover:text-foreground transition-colors">Terms of Service</Link>
+            <Link to="/accessibility" className="hover:text-foreground transition-colors">Accessibility</Link>
+            <Link to="/imprint" className="hover:text-foreground transition-colors">Imprint</Link>
           </div>
         </div>
       </div>
