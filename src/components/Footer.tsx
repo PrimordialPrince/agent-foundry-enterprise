@@ -141,7 +141,6 @@ export function Footer() {
             <Link to="/cookies" className="hover:text-foreground transition-colors">Cookie Policy</Link>
             <Link to="/terms" className="hover:text-foreground transition-colors">Terms of Service</Link>
             <Link to="/accessibility" className="hover:text-foreground transition-colors">Accessibility</Link>
-            <Link to="/imprint" className="hover:text-foreground transition-colors">Imprint</Link>
           </div>
         </div>
       </div>
