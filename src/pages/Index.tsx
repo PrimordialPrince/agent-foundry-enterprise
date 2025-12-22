@@ -155,7 +155,7 @@ export default function Index() {
               <div className="mt-8 flex flex-wrap gap-4">
                 <Link to="/agents">
                   <Button variant="enterprise" size="lg">
-                    Explore our agents
+                    Explore our Agents
                   </Button>
                 </Link>
                 <Link to="/contact">
