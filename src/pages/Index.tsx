@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { SolutionCard } from "@/components/SolutionCard";
 import { HeroIllustration } from "@/components/HeroIllustration";
 import networkGlobeBg from "@/assets/network-globe-bg.png";
+import { useEffect, useState } from "react";
 
 const solutions = [
   {
@@ -63,6 +64,20 @@ const clientLogos = [
 ];
 
 export default function Index() {
+  const [scrollY, setScrollY] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrollY(window.scrollY);
+    };
+    
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  // Calculate parallax offset - moves slower than scroll
+  const parallaxOffset = scrollY * 0.3;
+
   return (
     <main className="flex flex-col">
       {/* Hero Section - Pega inspired */}
@@ -184,13 +199,16 @@ export default function Index() {
 
       {/* Solutions Section */}
       <section className="py-20 bg-background relative overflow-hidden">
-        {/* Vector background layer */}
+        {/* Parallax background layer */}
         <div 
-          className="absolute inset-0 opacity-20 pointer-events-none"
+          className="absolute inset-0 opacity-20 pointer-events-none will-change-transform"
           style={{
             backgroundImage: `url(${networkGlobeBg})`,
             backgroundSize: 'cover',
             backgroundPosition: 'center',
+            transform: `translateY(${-parallaxOffset}px)`,
+            height: '150%',
+            top: '-25%',
           }}
         />
         <div className="container mx-auto px-6 relative z-10">
