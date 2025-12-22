@@ -44,7 +44,7 @@ export function Footer() {
           {/* Brand */}
           <div className="col-span-2 lg:col-span-1">
             <Link to="/" className="flex items-center gap-2">
-              <img src={axiobitLogo} alt="Axiobit" className="h-8 w-auto" />
+              <img src={axiobitLogo} alt="Axiobit" className="h-6 w-auto" />
             </Link>
             <p className="mt-4 text-sm text-muted-foreground max-w-xs">
               Building enterprise AI agents that transform how organizations operate at scale.
