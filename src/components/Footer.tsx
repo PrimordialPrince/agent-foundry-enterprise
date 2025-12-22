@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { Linkedin, Twitter, Github, Mail } from "lucide-react";
+import axiobitLogo from "@/assets/axiobit-logo.png";
 
 const footerLinks = {
   platform: [
@@ -43,10 +44,7 @@ export function Footer() {
           {/* Brand */}
           <div className="col-span-2 lg:col-span-1">
             <Link to="/" className="flex items-center gap-2">
-              <div className="h-8 w-8 rounded bg-primary flex items-center justify-center">
-                <span className="text-lg font-bold text-primary-foreground">A</span>
-              </div>
-              <span className="text-xl font-bold text-foreground">Axiobit</span>
+              <img src={axiobitLogo} alt="Axiobit" className="h-8 w-auto" />
             </Link>
             <p className="mt-4 text-sm text-muted-foreground max-w-xs">
               Building enterprise AI agents that transform how organizations operate at scale.
