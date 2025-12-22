@@ -203,10 +203,16 @@ export default function Index() {
             ))}
           </div>
           
-          <div className="mt-12 text-center">
+          <div className="mt-12 flex flex-wrap justify-center gap-4">
             <Link to="/agents">
               <Button variant="outline" size="lg">
                 View All Solutions
+                <ArrowRight className="ml-2 h-4 w-4" />
+              </Button>
+            </Link>
+            <Link to="/contact">
+              <Button variant="enterprise" size="lg">
+                Request a Demo
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
             </Link>
