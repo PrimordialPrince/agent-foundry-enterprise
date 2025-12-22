@@ -9,16 +9,16 @@ const buttonVariants = cva(
   {
     variants: {
       variant: {
-        default: "bg-primary text-primary-foreground hover:bg-primary/90",
+        default: "bg-primary text-primary-foreground hover:bg-accent hover:text-accent-foreground",
         destructive: "bg-destructive text-destructive-foreground hover:bg-destructive/90",
-        outline: "border border-border bg-transparent text-foreground hover:border-primary hover:text-primary",
-        secondary: "bg-secondary text-secondary-foreground hover:bg-secondary/80",
-        ghost: "text-muted-foreground hover:text-foreground hover:bg-muted/30",
-        link: "text-primary underline-offset-4 hover:underline",
+        outline: "border border-border bg-transparent text-foreground hover:border-accent hover:text-accent",
+        secondary: "bg-secondary text-secondary-foreground hover:bg-accent/20 hover:text-accent",
+        ghost: "text-muted-foreground hover:text-accent hover:bg-accent/10",
+        link: "text-primary underline-offset-4 hover:underline hover:text-accent",
         // Enterprise B2B variants
-        enterprise: "bg-primary text-primary-foreground hover:bg-primary-light shadow-enterprise",
-        "enterprise-outline": "border-2 border-primary bg-transparent text-primary hover:bg-primary hover:text-primary-foreground",
-        "enterprise-white": "bg-foreground text-background hover:bg-foreground/90",
+        enterprise: "bg-primary text-primary-foreground hover:bg-accent hover:text-accent-foreground shadow-enterprise",
+        "enterprise-outline": "border-2 border-primary bg-transparent text-primary hover:border-accent hover:bg-accent hover:text-accent-foreground",
+        "enterprise-white": "bg-foreground text-background hover:bg-accent hover:text-accent-foreground",
       },
       size: {
         default: "h-10 px-5 py-2",

@@ -54,7 +54,7 @@ export function Footer() {
                 <a
                   key={item.name}
                   href={item.href}
-                  className="text-muted-foreground hover:text-primary transition-colors"
+                  className="text-muted-foreground hover:text-accent transition-colors"
                   aria-label={item.name}
                 >
                   <item.icon className="h-5 w-5" />
@@ -71,7 +71,7 @@ export function Footer() {
                 <li key={item.name}>
                   <Link
                     to={item.href}
-                    className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+                    className="text-sm text-muted-foreground hover:text-accent transition-colors"
                   >
                     {item.name}
                   </Link>
@@ -87,7 +87,7 @@ export function Footer() {
                 <li key={item.name}>
                   <Link
                     to={item.href}
-                    className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+                    className="text-sm text-muted-foreground hover:text-accent transition-colors"
                   >
                     {item.name}
                   </Link>
@@ -103,7 +103,7 @@ export function Footer() {
                 <li key={item.name}>
                   <Link
                     to={item.href}
-                    className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+                    className="text-sm text-muted-foreground hover:text-accent transition-colors"
                   >
                     {item.name}
                   </Link>
@@ -119,7 +119,7 @@ export function Footer() {
                 <li key={item.name}>
                   <Link
                     to={item.href}
-                    className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+                    className="text-sm text-muted-foreground hover:text-accent transition-colors"
                   >
                     {item.name}
                   </Link>
@@ -135,10 +135,10 @@ export function Footer() {
             © {new Date().getFullYear()} Axiobit. All rights reserved.
           </p>
           <div className="flex flex-wrap items-center justify-center md:justify-end gap-4 md:gap-6 text-sm text-muted-foreground">
-            <Link to="/privacy" className="hover:text-foreground transition-colors">Privacy Policy</Link>
-            <Link to="/cookies" className="hover:text-foreground transition-colors">Cookie Policy</Link>
-            <Link to="/terms" className="hover:text-foreground transition-colors">Terms of Service</Link>
-            <Link to="/accessibility" className="hover:text-foreground transition-colors">Accessibility</Link>
+            <Link to="/privacy" className="hover:text-accent transition-colors">Privacy Policy</Link>
+            <Link to="/cookies" className="hover:text-accent transition-colors">Cookie Policy</Link>
+            <Link to="/terms" className="hover:text-accent transition-colors">Terms of Service</Link>
+            <Link to="/accessibility" className="hover:text-accent transition-colors">Accessibility</Link>
           </div>
         </div>
       </div>

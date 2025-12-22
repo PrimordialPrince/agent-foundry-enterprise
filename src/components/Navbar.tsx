@@ -50,8 +50,8 @@ export function Navbar() {
               className={cn(
                 "text-sm font-medium transition-colors",
                 location.pathname === item.href
-                  ? "text-primary"
-                  : "text-foreground hover:text-primary"
+                  ? "text-accent"
+                  : "text-foreground hover:text-accent"
               )}
             >
               {item.name}
@@ -84,8 +84,8 @@ export function Navbar() {
                 className={cn(
                   "block px-4 py-3 text-sm font-medium transition-colors rounded",
                   location.pathname === item.href
-                    ? "text-primary bg-primary/10"
-                    : "text-foreground hover:bg-secondary"
+                    ? "text-accent bg-accent/10"
+                    : "text-foreground hover:text-accent hover:bg-accent/10"
                 )}
                 onClick={() => setMobileMenuOpen(false)}
               >
