@@ -3,7 +3,7 @@ import { ArrowRight, Bot, Brain, Shield, Zap, Globe, Users, BarChart3, CheckCirc
 import { Button } from "@/components/ui/button";
 import { SolutionCard } from "@/components/SolutionCard";
 import { HeroIllustration } from "@/components/HeroIllustration";
-import vectorBg from "@/assets/vector-bg.png";
+import networkGlobeBg from "@/assets/network-globe-bg.png";
 
 const solutions = [
   {
@@ -186,9 +186,9 @@ export default function Index() {
       <section className="py-20 bg-background relative overflow-hidden">
         {/* Vector background layer */}
         <div 
-          className="absolute inset-0 opacity-15 pointer-events-none"
+          className="absolute inset-0 opacity-20 pointer-events-none"
           style={{
-            backgroundImage: `url(${vectorBg})`,
+            backgroundImage: `url(${networkGlobeBg})`,
             backgroundSize: 'cover',
             backgroundPosition: 'center',
           }}
