@@ -87,10 +87,21 @@ export default {
           from: { height: "var(--radix-accordion-content-height)" },
           to: { height: "0" },
         },
+        "float": {
+          "0%, 100%": { transform: "translateY(0) scale(1)", opacity: "0.3" },
+          "50%": { transform: "translateY(-10px) scale(1.1)", opacity: "0.6" },
+        },
+        "dash": {
+          "0%": { strokeDasharray: "0, 100", opacity: "0.2" },
+          "50%": { strokeDasharray: "50, 50", opacity: "0.5" },
+          "100%": { strokeDasharray: "100, 0", opacity: "0.2" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        "float": "float 6s ease-in-out infinite",
+        "dash": "dash 3s ease-in-out infinite",
       },
       backgroundImage: {
         "hero-gradient": "linear-gradient(135deg, hsl(var(--primary) / 0.1), hsl(var(--accent) / 0.05))",
