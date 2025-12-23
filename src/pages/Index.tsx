@@ -81,14 +81,14 @@ export default function Index() {
   return (
     <main className="flex flex-col">
       {/* Hero Section - Pega inspired */}
-      <section id="hero" className="relative min-h-[85vh] flex items-center bg-background overflow-hidden">
-        {/* Left dark background with angular clip */}
-        <div className="absolute left-0 top-0 bottom-0 w-[55%] bg-navy-light z-[1]" style={{ clipPath: 'polygon(0 0, 100% 0, 85% 100%, 0 100%)' }} />
+      <section id="hero" className="relative min-h-[85vh] flex items-center bg-navy-light lg:bg-background overflow-hidden">
+        {/* Left dark background with angular clip - hidden on mobile */}
+        <div className="hidden lg:block absolute left-0 top-0 bottom-0 w-[55%] bg-navy-light z-[1]" style={{ clipPath: 'polygon(0 0, 100% 0, 85% 100%, 0 100%)' }} />
         
-        {/* Right teal network globe background - extends behind the angular overlay */}
-        <div className="absolute right-0 top-0 bottom-0 w-full overflow-hidden">
-          {/* Gradient background */}
-          <div className="absolute inset-0 bg-gradient-to-br from-primary via-primary/90 to-[hsl(180,70%,45%)]" />
+        {/* Right teal network globe background - full width on mobile, positioned right on desktop */}
+        <div className="absolute inset-0 lg:right-0 lg:top-0 lg:bottom-0 lg:w-full overflow-hidden">
+          {/* Gradient background - more subtle on mobile */}
+          <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-primary/10 to-transparent lg:from-primary lg:via-primary/90 lg:to-[hsl(180,70%,45%)]" />
           
           {/* Parallax network globe image */}
           <div 
@@ -102,8 +102,8 @@ export default function Index() {
             }}
           />
           
-          {/* Subtle animated nodes overlay */}
-          <div className="absolute inset-0 opacity-60">
+          {/* Subtle animated nodes overlay - hidden on mobile for cleaner look */}
+          <div className="hidden lg:block absolute inset-0 opacity-60">
             {/* Floating connection points */}
             <div className="absolute top-[15%] right-[20%] w-3 h-3 rounded-full bg-white/50 animate-pulse" />
             <div className="absolute top-[35%] right-[35%] w-2 h-2 rounded-full bg-white/40 animate-pulse" style={{ animationDelay: '0.5s' }} />
