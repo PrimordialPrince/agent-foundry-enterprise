@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { ArrowRight, CheckCircle, MessageSquare, Mail, Phone, Mic, Shield } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import heroVideo from "@/assets/whappo-hero-bg.mp4";
+import heroVideo from "@/assets/whappo-hero-org.mp4";
 
 export default function WhappO() {
   return (
@@ -18,16 +18,16 @@ export default function WhappO() {
         >
           <source src={heroVideo} type="video/mp4" />
         </video>
-        {/* Overlay for readability */}
-        <div className="absolute inset-0 bg-gradient-to-br from-[hsl(200,60%,95%)]/80 via-[hsl(190,50%,92%)]/70 to-[hsl(180,40%,88%)]/60" />
+        {/* Dark overlay for text readability */}
+        <div className="absolute inset-0 bg-navy/60" />
         
-        <div className="container mx-auto px-6 pt-32 pb-20">
+        <div className="relative z-10 container mx-auto px-6 pt-32 pb-20">
           <div className="max-w-4xl">
-            <h1 className="font-serif text-5xl md:text-6xl lg:text-7xl text-navy font-medium leading-[1.05] mb-8">
+            <h1 className="font-serif text-5xl md:text-6xl lg:text-7xl text-white font-medium leading-[1.05] mb-8">
               Turn conversations<br />
               <span className="text-primary">into workflows.</span>
             </h1>
-            <p className="text-xl lg:text-2xl text-navy/70 leading-relaxed mb-10 max-w-2xl">
+            <p className="text-xl lg:text-2xl text-white/80 leading-relaxed mb-10 max-w-2xl">
               Only WhappO interprets natural language with enterprise precision—transforming WhatsApp, email, SMS, and voice into structured business intelligence.
             </p>
             <div className="flex flex-wrap gap-4">
