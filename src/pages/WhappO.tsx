@@ -1,15 +1,25 @@
 import { Link } from "react-router-dom";
 import { ArrowRight, CheckCircle, MessageSquare, Mail, Phone, Mic, Shield } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import heroVideo from "@/assets/whappo-hero-bg.mp4";
 
 export default function WhappO() {
   return (
     <main className="flex flex-col">
-      {/* Hero Section - Full bleed, Pega inspired */}
-      <section className="relative min-h-screen flex items-center overflow-hidden bg-gradient-to-br from-[hsl(200,60%,95%)] via-[hsl(190,50%,92%)] to-[hsl(180,40%,88%)]">
-        {/* Decorative elements */}
-        <div className="absolute top-20 right-[10%] w-96 h-96 bg-primary/10 rounded-full blur-3xl" />
-        <div className="absolute bottom-20 left-[5%] w-64 h-64 bg-accent/10 rounded-full blur-2xl" />
+      {/* Hero Section - Full bleed with video background */}
+      <section className="relative min-h-screen flex items-center overflow-hidden">
+        {/* Video Background */}
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="absolute inset-0 w-full h-full object-cover"
+        >
+          <source src={heroVideo} type="video/mp4" />
+        </video>
+        {/* Overlay for readability */}
+        <div className="absolute inset-0 bg-gradient-to-br from-[hsl(200,60%,95%)]/80 via-[hsl(190,50%,92%)]/70 to-[hsl(180,40%,88%)]/60" />
         
         <div className="container mx-auto px-6 pt-32 pb-20">
           <div className="max-w-4xl">
