@@ -1,50 +1,36 @@
 import { Link } from "react-router-dom";
 import { ArrowRight, CheckCircle, MessageSquare, Mail, Phone, Mic, Shield } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import whappoLogo from "@/assets/whappo-logo.png";
 
 export default function WhappO() {
   return (
-    <main className="flex flex-col pt-20">
-      {/* Hero Section - Pega inspired */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-[hsl(200,60%,95%)] via-[hsl(190,50%,92%)] to-[hsl(180,40%,90%)]">
-        <div className="container mx-auto px-6 py-16 lg:py-24">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            {/* Left - Typography */}
-            <div>
-              <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl text-navy font-medium leading-[1.1] mb-6">
-                Turn conversations<br />
-                <span className="text-primary">into workflows.</span>
-              </h1>
-              <p className="text-lg lg:text-xl text-navy/70 leading-relaxed mb-8 max-w-lg">
-                Only WhappO interprets natural language with enterprise precision—transforming WhatsApp, email, SMS, and voice into structured business intelligence.
-              </p>
-              <div className="flex flex-wrap gap-4">
-                <Link to="/contact">
-                  <Button variant="enterprise" size="lg" className="text-base px-8">
-                    Request a demo
-                  </Button>
-                </Link>
-                <Link to="/contact">
-                  <Button variant="outline" size="lg" className="text-base px-8 bg-white/80 hover:bg-white">
-                    Contact sales
-                  </Button>
-                </Link>
-              </div>
-            </div>
-
-            {/* Right - Logo/Illustration */}
-            <div className="flex justify-center lg:justify-end">
-              <div className="relative">
-                {/* Decorative elements */}
-                <div className="absolute -top-8 -left-8 w-32 h-32 bg-primary/10 rounded-full blur-2xl" />
-                <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-accent/10 rounded-full blur-xl" />
-                <img 
-                  src={whappoLogo} 
-                  alt="WhappO" 
-                  className="relative z-10 w-48 h-48 lg:w-64 lg:h-64 object-contain drop-shadow-2xl"
-                />
-              </div>
+    <main className="flex flex-col">
+      {/* Hero Section - Full bleed, Pega inspired */}
+      <section className="relative min-h-screen flex items-center overflow-hidden bg-gradient-to-br from-[hsl(200,60%,95%)] via-[hsl(190,50%,92%)] to-[hsl(180,40%,88%)]">
+        {/* Decorative elements */}
+        <div className="absolute top-20 right-[10%] w-96 h-96 bg-primary/10 rounded-full blur-3xl" />
+        <div className="absolute bottom-20 left-[5%] w-64 h-64 bg-accent/10 rounded-full blur-2xl" />
+        
+        <div className="container mx-auto px-6 pt-32 pb-20">
+          <div className="max-w-4xl">
+            <h1 className="font-serif text-5xl md:text-6xl lg:text-7xl text-navy font-medium leading-[1.05] mb-8">
+              Turn conversations<br />
+              <span className="text-primary">into workflows.</span>
+            </h1>
+            <p className="text-xl lg:text-2xl text-navy/70 leading-relaxed mb-10 max-w-2xl">
+              Only WhappO interprets natural language with enterprise precision—transforming WhatsApp, email, SMS, and voice into structured business intelligence.
+            </p>
+            <div className="flex flex-wrap gap-4">
+              <Link to="/contact">
+                <Button variant="enterprise" size="lg" className="text-base px-8 py-6">
+                  Request a demo
+                </Button>
+              </Link>
+              <Link to="/contact">
+                <Button variant="outline" size="lg" className="text-base px-8 py-6 bg-white/80 hover:bg-white border-navy/20">
+                  Contact sales
+                </Button>
+              </Link>
             </div>
           </div>
         </div>
