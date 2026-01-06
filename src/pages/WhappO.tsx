@@ -27,7 +27,7 @@ export default function WhappO() {
                 </Button>
               </Link>
               <Link to="/contact">
-                <Button variant="outline" size="lg" className="text-base px-8 py-6 bg-white/80 hover:bg-white border-navy/20">
+                <Button variant="outline" size="lg" className="text-base px-8 py-6 bg-white/80 hover:bg-white border-navy/20 text-navy">
                   Contact sales
                 </Button>
               </Link>
