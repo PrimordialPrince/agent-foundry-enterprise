@@ -14,13 +14,14 @@ export default function WhappO() {
           loop
           muted
           playsInline
-          className="absolute inset-0 w-full h-full object-cover"
+          preload="auto"
+          className="absolute inset-0 w-full h-full object-cover brightness-110 contrast-110 saturate-110"
         >
           <source src={heroVideo} type="video/mp4" />
         </video>
-        {/* Dark overlay for text readability */}
-        <div className="absolute inset-0 bg-navy/60" />
-        
+        {/* Overlay for text readability (keeps video visible) */}
+        <div className="absolute inset-0 bg-gradient-to-b from-background/50 via-background/20 to-background/60" />
+
         <div className="relative z-10 container mx-auto px-6 pt-32 pb-20">
           <div className="max-w-4xl">
             <h1 className="font-serif text-5xl md:text-6xl lg:text-7xl text-white font-medium leading-[1.05] mb-8">
