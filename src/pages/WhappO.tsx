@@ -1,185 +1,187 @@
 import { Link } from "react-router-dom";
-import { ArrowRight, MessageSquare, Mail, Phone, Mic, CheckCircle, Building2, Shield, Zap, Globe } from "lucide-react";
+import { ArrowRight, CheckCircle, MessageSquare, Mail, Phone, Mic, Shield } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import whappoLogo from "@/assets/whappo-logo.png";
 
 export default function WhappO() {
   return (
-    <main className="flex flex-col pt-20 bg-background">
-      {/* Hero - Compact, Impactful */}
-      <section className="border-b border-border">
-        <div className="container mx-auto px-6 py-12 lg:py-16">
-          <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-8">
-            <div className="flex items-center gap-6">
-              <img src={whappoLogo} alt="WhappO" className="w-20 h-20 lg:w-24 lg:h-24 object-contain" />
-              <div>
-                <div className="flex items-center gap-3 mb-1">
-                  <h1 className="text-3xl lg:text-4xl font-bold text-foreground">WhappO</h1>
-                  <span className="px-2 py-0.5 text-xs font-medium bg-primary/10 text-primary rounded">Enterprise</span>
-                </div>
-                <p className="text-lg text-muted-foreground">Conversational AI Agent for Workflow Automation</p>
-              </div>
-            </div>
-            <div className="flex items-center gap-3">
-              <Link to="/contact">
-                <Button variant="enterprise" size="lg">Request Demo</Button>
-              </Link>
-              <Link to="/contact">
-                <Button variant="outline" size="lg">Contact Sales</Button>
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Quick Stats Bar */}
-      <section className="bg-navy-light border-b border-border">
-        <div className="container mx-auto px-6 py-6">
-          <div className="flex flex-wrap items-center justify-between gap-6">
-            <div className="flex items-center gap-8 lg:gap-12">
-              <div className="text-center">
-                <div className="text-2xl font-bold text-primary">85%</div>
-                <div className="text-xs text-muted-foreground">Auto-Resolution</div>
-              </div>
-              <div className="text-center">
-                <div className="text-2xl font-bold text-primary">&lt;2s</div>
-                <div className="text-xs text-muted-foreground">Response Time</div>
-              </div>
-              <div className="text-center">
-                <div className="text-2xl font-bold text-primary">50+</div>
-                <div className="text-xs text-muted-foreground">Languages</div>
-              </div>
-              <div className="text-center">
-                <div className="text-2xl font-bold text-primary">24/7</div>
-                <div className="text-xs text-muted-foreground">Availability</div>
-              </div>
-            </div>
-            <div className="flex items-center gap-2 text-sm text-muted-foreground">
-              <Shield className="h-4 w-4 text-primary" />
-              <span>SOC 2 Compliant</span>
-              <span className="mx-2">•</span>
-              <span>GDPR Ready</span>
-              <span className="mx-2">•</span>
-              <span>Enterprise SLA</span>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Main Content Grid */}
-      <section className="container mx-auto px-6 py-12">
-        <div className="grid lg:grid-cols-3 gap-8">
-          
-          {/* Left - Overview */}
-          <div className="lg:col-span-2 space-y-8">
-            {/* What it does */}
+    <main className="flex flex-col pt-20">
+      {/* Hero Section - Pega inspired */}
+      <section className="relative overflow-hidden bg-gradient-to-br from-[hsl(200,60%,95%)] via-[hsl(190,50%,92%)] to-[hsl(180,40%,90%)]">
+        <div className="container mx-auto px-6 py-16 lg:py-24">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            {/* Left - Typography */}
             <div>
-              <h2 className="text-xl font-semibold text-foreground mb-4">Overview</h2>
-              <p className="text-muted-foreground leading-relaxed">
-                WhappO is an Enterprise AI agent built on the <Link to="/framework" className="text-primary hover:underline">InferenceAI framework</Link>, enabling governed interpretation of conversational data within enterprise workflows. It transforms natural language conversations into structured business intelligence—identifying intentions, extracting data, validating rules, and generating actionable objects.
+              <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl text-navy font-medium leading-[1.1] mb-6">
+                Turn conversations<br />
+                <span className="text-primary">into workflows.</span>
+              </h1>
+              <p className="text-lg lg:text-xl text-navy/70 leading-relaxed mb-8 max-w-lg">
+                Only WhappO interprets natural language with enterprise precision—transforming WhatsApp, email, SMS, and voice into structured business intelligence.
+              </p>
+              <div className="flex flex-wrap gap-4">
+                <Link to="/contact">
+                  <Button variant="enterprise" size="lg" className="text-base px-8">
+                    Request a demo
+                  </Button>
+                </Link>
+                <Link to="/contact">
+                  <Button variant="outline" size="lg" className="text-base px-8 bg-white/80 hover:bg-white">
+                    Contact sales
+                  </Button>
+                </Link>
+              </div>
+            </div>
+
+            {/* Right - Logo/Illustration */}
+            <div className="flex justify-center lg:justify-end">
+              <div className="relative">
+                {/* Decorative elements */}
+                <div className="absolute -top-8 -left-8 w-32 h-32 bg-primary/10 rounded-full blur-2xl" />
+                <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-accent/10 rounded-full blur-xl" />
+                <img 
+                  src={whappoLogo} 
+                  alt="WhappO" 
+                  className="relative z-10 w-48 h-48 lg:w-64 lg:h-64 object-contain drop-shadow-2xl"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Value Prop Section - Two column italic style */}
+      <section className="bg-background py-16 lg:py-20 border-b border-border">
+        <div className="container mx-auto px-6">
+          <div className="grid lg:grid-cols-5 gap-8 lg:gap-16 items-start">
+            <div className="lg:col-span-2">
+              <h2 className="font-serif text-3xl lg:text-4xl text-foreground leading-tight italic">
+                No manual entry.<br />
+                No miscommunication.<br />
+                No delays.
+              </h2>
+            </div>
+            <div className="lg:col-span-3">
+              <p className="text-lg text-muted-foreground leading-relaxed">
+                When you rely on humans to interpret messages and key in data, you end up with errors, delays, and frustrated customers. WhappO uses governed AI to understand intent, extract entities, validate against business rules, and generate structured objects—orders, requests, approvals, tasks—automatically and at scale.
               </p>
             </div>
+          </div>
+        </div>
+      </section>
 
+      {/* Capabilities + Stats Grid */}
+      <section className="bg-navy-light py-16 lg:py-20">
+        <div className="container mx-auto px-6">
+          <div className="grid lg:grid-cols-3 gap-8">
             {/* Channels */}
-            <div>
-              <h3 className="text-sm font-semibold text-muted-foreground uppercase tracking-wider mb-3">Supported Channels</h3>
-              <div className="flex flex-wrap gap-3">
+            <div className="bg-navy/50 border border-border rounded-2xl p-8">
+              <h3 className="text-sm font-semibold text-primary uppercase tracking-wider mb-6">Channels</h3>
+              <div className="space-y-4">
                 {[
                   { icon: MessageSquare, name: "WhatsApp Business" },
                   { icon: Mail, name: "Email" },
                   { icon: Phone, name: "SMS" },
                   { icon: Mic, name: "Voice Transcripts" },
                 ].map((ch) => (
-                  <div key={ch.name} className="flex items-center gap-2 px-4 py-2 bg-secondary/50 rounded-lg border border-border">
-                    <ch.icon className="h-4 w-4 text-primary" />
-                    <span className="text-sm text-foreground">{ch.name}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            {/* Capabilities Grid */}
-            <div>
-              <h3 className="text-sm font-semibold text-muted-foreground uppercase tracking-wider mb-3">Capabilities</h3>
-              <div className="grid sm:grid-cols-2 gap-4">
-                {[
-                  { icon: Zap, title: "Intent Recognition", desc: "Interprets informal messages with enterprise-grade NLU" },
-                  { icon: Building2, title: "Workflow Generation", desc: "Auto-creates orders, requests, approvals, tasks" },
-                  { icon: Globe, title: "Context Awareness", desc: "Understands urgency, dependencies, and history" },
-                  { icon: Shield, title: "Business Rules", desc: "Validates against your compliance requirements" },
-                ].map((cap) => (
-                  <div key={cap.title} className="flex gap-3 p-4 bg-secondary/30 rounded-lg border border-border/50">
-                    <cap.icon className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
-                    <div>
-                      <div className="font-medium text-foreground text-sm">{cap.title}</div>
-                      <div className="text-xs text-muted-foreground mt-0.5">{cap.desc}</div>
+                  <div key={ch.name} className="flex items-center gap-3">
+                    <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
+                      <ch.icon className="h-5 w-5 text-primary" />
                     </div>
+                    <span className="text-foreground">{ch.name}</span>
                   </div>
                 ))}
               </div>
             </div>
 
-            {/* Integration */}
-            <div>
-              <h3 className="text-sm font-semibold text-muted-foreground uppercase tracking-wider mb-3">Integrations</h3>
-              <div className="flex flex-wrap gap-2">
-                {["SAP", "Salesforce", "Microsoft Dynamics", "Oracle", "ServiceNow", "Workday", "HubSpot", "Zendesk"].map((name) => (
-                  <span key={name} className="px-3 py-1.5 text-xs font-medium bg-background border border-border rounded-full text-muted-foreground">
-                    {name}
-                  </span>
-                ))}
-              </div>
-            </div>
-          </div>
-
-          {/* Right - Action Panel */}
-          <div className="space-y-6">
-            {/* Primary CTA Card */}
-            <div className="bg-navy-light border border-border rounded-xl p-6">
-              <h3 className="font-semibold text-foreground mb-2">Deploy WhappO</h3>
-              <p className="text-sm text-muted-foreground mb-4">
-                Get started with a personalized demo and deployment plan for your organization.
-              </p>
-              <div className="space-y-3">
-                <Link to="/contact" className="block">
-                  <Button variant="enterprise" className="w-full">
-                    Schedule Demo <ArrowRight className="ml-2 h-4 w-4" />
-                  </Button>
-                </Link>
-                <Link to="/contact" className="block">
-                  <Button variant="outline" className="w-full">Talk to an Expert</Button>
-                </Link>
-              </div>
-            </div>
-
-            {/* Key Benefits */}
-            <div className="border border-border rounded-xl p-6">
-              <h3 className="font-semibold text-foreground mb-4">Business Impact</h3>
+            {/* Capabilities */}
+            <div className="bg-navy/50 border border-border rounded-2xl p-8">
+              <h3 className="text-sm font-semibold text-primary uppercase tracking-wider mb-6">Capabilities</h3>
               <ul className="space-y-3">
                 {[
-                  "Eliminate manual data entry errors",
-                  "Reduce response cycles by 90%",
-                  "24/7 automated customer handling",
-                  "Full audit trail & compliance",
-                  "Seamless ERP/CRM integration",
+                  "Intent recognition & entity extraction",
+                  "Business rule validation",
+                  "Workflow object generation",
+                  "Context & urgency understanding",
+                  "ERP/CRM/BPM integration",
                 ].map((item) => (
-                  <li key={item} className="flex items-start gap-2 text-sm">
-                    <CheckCircle className="h-4 w-4 text-primary flex-shrink-0 mt-0.5" />
-                    <span className="text-muted-foreground">{item}</span>
+                  <li key={item} className="flex items-start gap-3">
+                    <CheckCircle className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
+                    <span className="text-muted-foreground text-sm">{item}</span>
                   </li>
                 ))}
               </ul>
             </div>
 
-            {/* Technical Link */}
-            <div className="border border-border rounded-xl p-6">
-              <h3 className="font-semibold text-foreground mb-2">Technical Foundation</h3>
-              <p className="text-sm text-muted-foreground mb-3">
-                Built on our proprietary InferenceAI framework for enterprise-grade governance and scale.
+            {/* Performance */}
+            <div className="bg-navy/50 border border-border rounded-2xl p-8">
+              <h3 className="text-sm font-semibold text-primary uppercase tracking-wider mb-6">Performance</h3>
+              <div className="space-y-6">
+                {[
+                  { value: "85%", label: "Auto-resolution rate" },
+                  { value: "<2s", label: "Average response time" },
+                  { value: "50+", label: "Languages supported" },
+                  { value: "24/7", label: "Always available" },
+                ].map((stat) => (
+                  <div key={stat.label} className="flex items-baseline justify-between border-b border-border/50 pb-3">
+                    <span className="text-muted-foreground text-sm">{stat.label}</span>
+                    <span className="text-2xl font-bold text-primary">{stat.value}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Trust + CTA Section */}
+      <section className="bg-background py-16 lg:py-20">
+        <div className="container mx-auto px-6">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            {/* Trust signals */}
+            <div>
+              <h3 className="text-sm font-semibold text-muted-foreground uppercase tracking-wider mb-4">Enterprise Ready</h3>
+              <div className="flex flex-wrap items-center gap-4 mb-6">
+                {["SOC 2 Type II", "GDPR Compliant", "Enterprise SLA", "SSO Support"].map((badge) => (
+                  <div key={badge} className="flex items-center gap-2 px-4 py-2 bg-secondary/50 rounded-full border border-border">
+                    <Shield className="h-4 w-4 text-primary" />
+                    <span className="text-sm text-foreground">{badge}</span>
+                  </div>
+                ))}
+              </div>
+              <h3 className="text-sm font-semibold text-muted-foreground uppercase tracking-wider mb-4 mt-8">Integrates With</h3>
+              <div className="flex flex-wrap gap-2">
+                {["SAP", "Salesforce", "Microsoft Dynamics", "Oracle", "ServiceNow", "Workday"].map((name) => (
+                  <span key={name} className="px-3 py-1.5 text-xs font-medium bg-secondary/30 border border-border rounded text-muted-foreground">
+                    {name}
+                  </span>
+                ))}
+              </div>
+            </div>
+
+            {/* CTA Card */}
+            <div className="bg-gradient-to-br from-primary/10 via-primary/5 to-transparent border border-primary/20 rounded-2xl p-8">
+              <h2 className="font-serif text-2xl lg:text-3xl text-foreground mb-4">
+                Ready to automate your conversations?
+              </h2>
+              <p className="text-muted-foreground mb-6">
+                Get a personalized demo and see how WhappO transforms customer communications into structured workflows.
               </p>
-              <Link to="/framework" className="text-sm text-primary hover:underline font-medium inline-flex items-center gap-1">
-                View Framework Documentation <ArrowRight className="h-3 w-3" />
-              </Link>
+              <div className="flex flex-col sm:flex-row gap-3">
+                <Link to="/contact" className="flex-1">
+                  <Button variant="enterprise" className="w-full">
+                    Schedule Demo <ArrowRight className="ml-2 h-4 w-4" />
+                  </Button>
+                </Link>
+                <Link to="/framework" className="flex-1">
+                  <Button variant="outline" className="w-full">
+                    View Framework
+                  </Button>
+                </Link>
+              </div>
+              <p className="text-xs text-muted-foreground mt-4">
+                Built on <Link to="/framework" className="text-primary hover:underline">InferenceAI</Link> — our proprietary enterprise AI framework
+              </p>
             </div>
           </div>
         </div>
