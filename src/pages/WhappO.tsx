@@ -1,42 +1,21 @@
 import { Link } from "react-router-dom";
-import { ArrowRight, MessageSquare, Mail, Phone, Mic, CheckCircle, Zap, Settings, Link2, Clock } from "lucide-react";
+import { ArrowRight, MessageSquare, Mail, Phone, Mic, CheckCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Section, SectionHeader } from "@/components/Section";
 import whappoLogo from "@/assets/whappo-logo.png";
 
 const capabilities = [
-  {
-    icon: MessageSquare,
-    title: "Interprets Informal Messages",
-    description: "Enterprise precision for natural language—understanding slang, abbreviations, and context.",
-  },
-  {
-    icon: Settings,
-    title: "Structures Into Workflows",
-    description: "Automatically converts messages into orders, requests, approvals, and actionable tasks.",
-  },
-  {
-    icon: Zap,
-    title: "Understands Context & Urgency",
-    description: "Identifies customer intentions, dependencies, and priority levels in real-time.",
-  },
-  {
-    icon: Link2,
-    title: "Seamless System Integration",
-    description: "Connects directly to ERP, CRM, and BPM systems for end-to-end automation.",
-  },
-  {
-    icon: Clock,
-    title: "Eliminates Manual Entry",
-    description: "No more miscommunication or long response cycles—instant structured output.",
-  },
+  "Interprets informal messages with enterprise precision",
+  "Automatically structures messages into workflows",
+  "Understands context, urgency, and dependencies",
+  "Connects seamlessly to ERP, CRM, and BPM systems",
+  "Eliminates manual entry, miscommunication, and long response cycles",
 ];
 
 const channels = [
   { icon: MessageSquare, name: "WhatsApp" },
   { icon: Mail, name: "Email" },
   { icon: Phone, name: "SMS" },
-  { icon: Mic, name: "Voice Transcripts" },
+  { icon: Mic, name: "Voice" },
 ];
 
 const metrics = [
@@ -49,160 +28,105 @@ const metrics = [
 export default function WhappO() {
   return (
     <main className="flex flex-col pt-20">
-      {/* Hero Section */}
-      <section className="py-20 lg:py-32 bg-navy-light relative overflow-hidden">
+      <section className="min-h-[calc(100vh-5rem)] bg-navy-light relative overflow-hidden flex items-center">
         <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-transparent" />
-        <div className="container mx-auto px-6 relative z-10">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <span className="enterprise-badge mb-6">Enterprise AI Agent</span>
-              <h1 className="text-display-lg text-foreground mt-4">WhappO</h1>
-              <p className="text-xl text-primary mt-4 font-medium">
-                Conversational Intelligence for Enterprise Workflows
-              </p>
-              <p className="mt-6 text-lg text-muted-foreground leading-relaxed">
-                WhappO is an Enterprise AI agent built on the InferenceAI framework, enabling governed interpretation of conversational data within enterprise workflows.
-              </p>
-              <p className="mt-4 text-muted-foreground leading-relaxed">
-                Transform every natural language conversation—WhatsApp, email, SMS, voice transcripts—into structured business intelligence.
-              </p>
-              <div className="mt-8 flex flex-wrap gap-4">
-                <Link to="/contact">
-                  <Button variant="enterprise" size="lg">
-                    Deploy WhappO <ArrowRight className="ml-2 h-4 w-4" />
-                  </Button>
-                </Link>
-                <Link to="/framework">
-                  <Button variant="outline" size="lg">
-                    Learn About InferenceAI
-                  </Button>
-                </Link>
-              </div>
-            </div>
-            <div className="flex justify-center lg:justify-end">
-              <div className="relative">
-                <div className="absolute inset-0 bg-primary/20 rounded-3xl blur-3xl" />
+        
+        <div className="container mx-auto px-6 py-12 relative z-10">
+          <div className="grid lg:grid-cols-12 gap-8 lg:gap-12 items-start">
+            
+            {/* Left Column - Logo, Title, Description */}
+            <div className="lg:col-span-5">
+              <div className="flex items-center gap-4 mb-6">
                 <img 
                   src={whappoLogo} 
-                  alt="WhappO Logo" 
-                  className="relative z-10 w-64 h-64 lg:w-80 lg:h-80 object-contain"
+                  alt="WhappO" 
+                  className="w-16 h-16 lg:w-20 lg:h-20 object-contain"
                 />
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Metrics Section */}
-      <section className="py-12 bg-background border-y border-border/50">
-        <div className="container mx-auto px-6">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {metrics.map((metric) => (
-              <div key={metric.label} className="text-center">
-                <div className="text-3xl lg:text-4xl font-bold text-primary">{metric.value}</div>
-                <div className="text-sm text-muted-foreground mt-1">{metric.label}</div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Channels Section */}
-      <Section>
-        <SectionHeader
-          eyebrow="Multi-Channel"
-          title="One Agent, Every Conversation Channel"
-          description="WhappO processes natural language from all your customer communication channels into actionable business intelligence."
-        />
-        <div className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-6">
-          {channels.map((channel) => (
-            <div 
-              key={channel.name}
-              className="enterprise-card p-6 text-center hover:border-primary/50 transition-colors"
-            >
-              <div className="inline-flex p-4 rounded-xl bg-primary/10 mb-4">
-                <channel.icon className="h-8 w-8 text-primary" />
-              </div>
-              <h3 className="font-semibold text-foreground">{channel.name}</h3>
-            </div>
-          ))}
-        </div>
-      </Section>
-
-      {/* Capabilities Section */}
-      <Section className="section-gradient">
-        <SectionHeader
-          eyebrow="Key Capabilities"
-          title="Enterprise-Grade Conversational AI"
-          description="WhappO identifies customer intentions, extracts key data, validates business rules, and generates structured objects like orders, requests, approvals, and tasks."
-        />
-        <div className="mt-12 grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {capabilities.map((capability) => (
-            <div 
-              key={capability.title}
-              className="enterprise-card p-8"
-            >
-              <div className="inline-flex p-3 rounded-xl bg-primary/10 mb-4">
-                <capability.icon className="h-6 w-6 text-primary" />
-              </div>
-              <h3 className="text-lg font-semibold text-foreground mb-2">{capability.title}</h3>
-              <p className="text-muted-foreground">{capability.description}</p>
-            </div>
-          ))}
-        </div>
-      </Section>
-
-      {/* How It Works */}
-      <Section>
-        <SectionHeader
-          eyebrow="How It Works"
-          title="From Conversation to Action"
-          description="WhappO transforms unstructured messages into structured business outputs in real-time."
-        />
-        <div className="mt-12 max-w-4xl mx-auto">
-          <div className="space-y-6">
-            {[
-              { step: "01", title: "Capture", description: "Receive messages from WhatsApp, email, SMS, or voice transcripts." },
-              { step: "02", title: "Interpret", description: "AI analyzes intent, extracts entities, and understands context." },
-              { step: "03", title: "Validate", description: "Business rules are applied to ensure data integrity." },
-              { step: "04", title: "Structure", description: "Generate orders, tasks, approvals, or requests automatically." },
-              { step: "05", title: "Integrate", description: "Push structured data to ERP, CRM, or BPM systems." },
-            ].map((item) => (
-              <div key={item.step} className="flex gap-6 items-start">
-                <div className="flex-shrink-0 w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
-                  <span className="text-primary font-bold">{item.step}</span>
-                </div>
                 <div>
-                  <h3 className="text-lg font-semibold text-foreground">{item.title}</h3>
-                  <p className="text-muted-foreground mt-1">{item.description}</p>
+                  <span className="text-xs text-primary font-medium uppercase tracking-wider">Enterprise AI Agent</span>
+                  <h1 className="text-3xl lg:text-4xl font-bold text-foreground">WhappO</h1>
                 </div>
               </div>
-            ))}
-          </div>
-        </div>
-      </Section>
+              
+              <p className="text-lg text-primary font-medium mb-4">
+                Conversational Intelligence for Enterprise Workflows
+              </p>
+              
+              <p className="text-muted-foreground leading-relaxed mb-6">
+                WhappO transforms every natural language conversation—WhatsApp, email, SMS, voice transcripts—into structured business intelligence. It identifies customer intentions, extracts key data, validates business rules, and generates structured objects like orders, requests, approvals, and tasks.
+              </p>
 
-      {/* CTA Section */}
-      <Section className="bg-navy-light">
-        <div className="max-w-3xl mx-auto text-center">
-          <h2 className="text-display-sm text-foreground mb-4">Ready to Transform Your Customer Communications?</h2>
-          <p className="text-muted-foreground mb-8">
-            Deploy WhappO and turn every conversation into structured business intelligence.
-          </p>
-          <div className="flex flex-wrap justify-center gap-4">
-            <Link to="/contact">
-              <Button variant="enterprise" size="lg">
-                Get Started <ArrowRight className="ml-2 h-4 w-4" />
-              </Button>
-            </Link>
-            <Link to="/agents">
-              <Button variant="outline" size="lg">
-                View All Agents
-              </Button>
-            </Link>
+              {/* Channels */}
+              <div className="flex items-center gap-4 mb-6">
+                <span className="text-sm text-muted-foreground">Channels:</span>
+                <div className="flex gap-2">
+                  {channels.map((channel) => (
+                    <div 
+                      key={channel.name}
+                      className="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-primary/10 text-sm"
+                      title={channel.name}
+                    >
+                      <channel.icon className="h-4 w-4 text-primary" />
+                      <span className="text-foreground hidden sm:inline">{channel.name}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              {/* CTA Buttons */}
+              <div className="flex flex-wrap gap-3">
+                <Link to="/contact">
+                  <Button variant="enterprise" size="lg">
+                    Request a Demo <ArrowRight className="ml-2 h-4 w-4" />
+                  </Button>
+                </Link>
+                <Link to="/contact">
+                  <Button variant="outline" size="lg">
+                    Contact Sales
+                  </Button>
+                </Link>
+              </div>
+            </div>
+
+            {/* Middle Column - Capabilities */}
+            <div className="lg:col-span-4">
+              <div className="enterprise-card p-6 h-full">
+                <h3 className="text-sm font-semibold text-primary uppercase tracking-wider mb-4">Key Capabilities</h3>
+                <ul className="space-y-3">
+                  {capabilities.map((capability) => (
+                    <li key={capability} className="flex items-start gap-3">
+                      <CheckCircle className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
+                      <span className="text-sm text-muted-foreground">{capability}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+
+            {/* Right Column - Metrics */}
+            <div className="lg:col-span-3">
+              <div className="enterprise-card p-6 h-full">
+                <h3 className="text-sm font-semibold text-primary uppercase tracking-wider mb-4">Performance</h3>
+                <div className="space-y-4">
+                  {metrics.map((metric) => (
+                    <div key={metric.label} className="flex items-center justify-between">
+                      <span className="text-sm text-muted-foreground">{metric.label}</span>
+                      <span className="text-xl font-bold text-primary">{metric.value}</span>
+                    </div>
+                  ))}
+                </div>
+                
+                <div className="border-t border-border mt-6 pt-6">
+                  <p className="text-xs text-muted-foreground mb-3">Built on</p>
+                  <Link to="/framework" className="text-sm text-primary hover:underline font-medium">
+                    InferenceAI Framework →
+                  </Link>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-      </Section>
+      </section>
     </main>
   );
 }
