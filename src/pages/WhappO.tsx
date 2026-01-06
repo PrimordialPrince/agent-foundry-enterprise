@@ -22,29 +22,29 @@ export default function WhappO() {
         {/* Overlay for text readability (keeps video visible) */}
         <div className="absolute inset-0 bg-gradient-to-b from-navy/40 via-transparent to-navy/50" />
 
+        {/* Soft gradient fade behind text area */}
+        <div className="absolute inset-y-0 left-0 w-3/4 bg-gradient-to-r from-navy/90 via-navy/60 to-transparent" />
+
         <div className="relative z-10 container mx-auto px-6 pt-32 pb-20">
           <div className="max-w-4xl">
-            {/* Gradient underlay for text */}
-            <div className="inline-block rounded-2xl bg-gradient-to-r from-navy/80 via-navy/60 to-transparent backdrop-blur-sm p-8 -ml-8">
-              <h1 className="font-serif text-5xl md:text-6xl lg:text-7xl text-white font-medium leading-[1.05] mb-8">
-                Turn conversations<br />
-                <span className="text-primary">into workflows.</span>
-              </h1>
-              <p className="text-xl lg:text-2xl text-white/90 leading-relaxed mb-10 max-w-2xl">
-                Only WhappO interprets natural language with enterprise precision—transforming WhatsApp, email, SMS, and voice into structured business intelligence.
-              </p>
-              <div className="flex flex-wrap gap-4">
-                <Link to="/contact">
-                  <Button variant="enterprise" size="lg" className="text-base px-8 py-6">
-                    Request a demo
-                  </Button>
-                </Link>
-                <Link to="/contact">
-                  <Button variant="outline" size="lg" className="text-base px-8 py-6 bg-white/80 hover:bg-white border-navy/20 text-navy">
-                    Contact sales
-                  </Button>
-                </Link>
-              </div>
+            <h1 className="font-serif text-5xl md:text-6xl lg:text-7xl text-white font-medium leading-[1.05] mb-8">
+              Turn conversations<br />
+              <span className="text-primary">into workflows.</span>
+            </h1>
+            <p className="text-xl lg:text-2xl text-white/90 leading-relaxed mb-10 max-w-2xl">
+              Only WhappO interprets natural language with enterprise precision—transforming WhatsApp, email, SMS, and voice into structured business intelligence.
+            </p>
+            <div className="flex flex-wrap gap-4">
+              <Link to="/contact">
+                <Button variant="enterprise" size="lg" className="text-base px-8 py-6">
+                  Request a demo
+                </Button>
+              </Link>
+              <Link to="/contact">
+                <Button variant="outline" size="lg" className="text-base px-8 py-6 bg-white/80 hover:bg-white border-navy/20 text-navy">
+                  Contact sales
+                </Button>
+              </Link>
             </div>
           </div>
         </div>
