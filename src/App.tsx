@@ -8,6 +8,8 @@ import { Footer } from "./components/Footer";
 import Index from "./pages/Index";
 import Agents from "./pages/Agents";
 import WhappO from "./pages/WhappO";
+import YCarbon from "./pages/YCarbon";
+import Arheion from "./pages/Arheion";
 import Framework from "./pages/Framework";
 import CaseStudies from "./pages/CaseStudies";
 import About from "./pages/About";
@@ -32,6 +34,8 @@ const App = () => (
           <Route path="/" element={<Index />} />
           <Route path="/agents" element={<Agents />} />
           <Route path="/agents/whappo" element={<WhappO />} />
+          <Route path="/agents/ycarbon" element={<YCarbon />} />
+          <Route path="/agents/arheion" element={<Arheion />} />
           <Route path="/framework" element={<Framework />} />
           <Route path="/case-studies" element={<CaseStudies />} />
           <Route path="/about" element={<About />} />

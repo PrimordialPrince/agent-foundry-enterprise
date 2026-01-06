@@ -50,13 +50,11 @@ export default function Agents() {
                   <div key={m.label}><div className="text-2xl font-bold text-primary">{m.value}</div><div className="text-xs text-muted-foreground">{m.label}</div></div>
                 ))}
               </div>
-              <div className="flex gap-4">
-                <Link to={agent.id === "whappo" ? "/agents/whappo" : "/contact"}>
-                  <Button variant="enterprise">
-                    {agent.id === "whappo" ? "Learn More" : "Deploy " + agent.name} <ArrowRight className="ml-2 h-4 w-4" />
-                  </Button>
-                </Link>
-              </div>
+              <Link to={`/agents/${agent.id}`}>
+                <Button variant="enterprise">
+                  Learn More <ArrowRight className="ml-2 h-4 w-4" />
+                </Button>
+              </Link>
             </div>
             <div className="enterprise-card p-8">
               <h3 className="text-lg font-semibold mb-6">Key Capabilities</h3>
