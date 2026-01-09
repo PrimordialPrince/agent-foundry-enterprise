@@ -1,29 +1,15 @@
 import { Link } from "react-router-dom";
 import { ArrowRight, CheckCircle, MessageSquare, Mail, Phone, Mic, Shield } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import heroVideo from "@/assets/whappo-hero-bg.mp4";
+import WhappOHeroIllustration from "@/components/WhappOHeroIllustration";
 
 export default function WhappO() {
   return (
     <main className="flex flex-col">
-      {/* Hero Section - Full bleed with video background */}
+      {/* Hero Section - Full bleed with static illustration */}
       <section className="relative min-h-screen flex items-center overflow-hidden">
-        {/* Video Background */}
-        <video
-          autoPlay
-          loop
-          muted
-          playsInline
-          preload="auto"
-          className="absolute inset-0 w-full h-full object-cover brightness-110 contrast-110 saturate-110"
-        >
-          <source src={heroVideo} type="video/mp4" />
-        </video>
-        {/* Overlay for text readability (keeps video visible) */}
-        <div className="absolute inset-0 bg-gradient-to-b from-navy/40 via-transparent to-navy/50" />
-
-        {/* Soft gradient fade behind text area */}
-        <div className="absolute inset-y-0 left-0 w-3/4 bg-gradient-to-r from-navy/90 via-navy/60 to-transparent" />
+        {/* Static Illustration Background */}
+        <WhappOHeroIllustration />
 
         <div className="relative z-10 container mx-auto px-6 pt-32 pb-20">
           <div className="max-w-4xl">
