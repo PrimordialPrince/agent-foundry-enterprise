@@ -11,7 +11,10 @@ export default function WhappOHeroIllustration() {
         <div className="relative w-[500px] h-[500px] lg:w-[600px] lg:h-[600px]">
           
           {/* Chat bubble - Dark Blue (top left) */}
-          <div className="absolute top-8 left-0 bg-[#1e3a5f] rounded-2xl rounded-bl-sm p-4 shadow-lg w-48 animate-fade-in" style={{ animationDelay: '0.1s' }}>
+          <div 
+            className="absolute top-8 left-0 bg-[#1e3a5f] rounded-2xl rounded-bl-sm p-4 shadow-lg w-48 animate-float-slow"
+            style={{ animationDelay: '0s' }}
+          >
             <div className="space-y-2">
               <div className="h-2 bg-white/30 rounded w-full" />
               <div className="h-2 bg-white/30 rounded w-3/4" />
@@ -20,7 +23,10 @@ export default function WhappOHeroIllustration() {
           </div>
 
           {/* Chat bubble - Light Blue (top right) */}
-          <div className="absolute top-0 right-8 bg-[#60a5fa] rounded-2xl rounded-br-sm p-4 shadow-lg w-44 animate-fade-in" style={{ animationDelay: '0.2s' }}>
+          <div 
+            className="absolute top-0 right-8 bg-[#60a5fa] rounded-2xl rounded-br-sm p-4 shadow-lg w-44 animate-float-medium"
+            style={{ animationDelay: '0.5s' }}
+          >
             <div className="space-y-2">
               <div className="h-2 bg-white/40 rounded w-full" />
               <div className="h-2 bg-white/40 rounded w-2/3" />
@@ -28,7 +34,10 @@ export default function WhappOHeroIllustration() {
           </div>
 
           {/* Email card - Pink (middle) */}
-          <div className="absolute top-32 right-0 bg-[#f472b6] rounded-xl p-4 shadow-lg w-56 animate-fade-in" style={{ animationDelay: '0.3s' }}>
+          <div 
+            className="absolute top-32 right-0 bg-[#f472b6] rounded-xl p-4 shadow-lg w-56 animate-float-fast"
+            style={{ animationDelay: '1s' }}
+          >
             <div className="flex items-center gap-2 mb-3">
               <Mail className="h-4 w-4 text-white/80" />
               <div className="h-2 bg-white/40 rounded w-20" />
@@ -41,7 +50,10 @@ export default function WhappOHeroIllustration() {
           </div>
 
           {/* Chat bubble - Teal (middle left) */}
-          <div className="absolute top-48 left-12 bg-[#14b8a6] rounded-2xl rounded-bl-sm p-4 shadow-lg w-40 animate-fade-in" style={{ animationDelay: '0.4s' }}>
+          <div 
+            className="absolute top-48 left-12 bg-[#14b8a6] rounded-2xl rounded-bl-sm p-4 shadow-lg w-40 animate-float-medium"
+            style={{ animationDelay: '1.5s' }}
+          >
             <div className="space-y-2">
               <div className="h-2 bg-white/40 rounded w-full" />
               <div className="h-2 bg-white/40 rounded w-1/2" />
@@ -49,7 +61,10 @@ export default function WhappOHeroIllustration() {
           </div>
 
           {/* Email card - Light Purple (bottom right) */}
-          <div className="absolute bottom-24 right-12 bg-[#a78bfa] rounded-xl p-4 shadow-lg w-52 animate-fade-in" style={{ animationDelay: '0.5s' }}>
+          <div 
+            className="absolute bottom-24 right-12 bg-[#a78bfa] rounded-xl p-4 shadow-lg w-52 animate-float-slow"
+            style={{ animationDelay: '2s' }}
+          >
             <div className="flex items-center gap-2 mb-3">
               <Mail className="h-4 w-4 text-white/80" />
               <div className="h-2 bg-white/40 rounded w-16" />
@@ -61,7 +76,10 @@ export default function WhappOHeroIllustration() {
           </div>
 
           {/* Chat bubble - Dark Blue (bottom left) */}
-          <div className="absolute bottom-32 left-0 bg-[#1e40af] rounded-2xl rounded-br-sm p-4 shadow-lg w-36 animate-fade-in" style={{ animationDelay: '0.6s' }}>
+          <div 
+            className="absolute bottom-32 left-0 bg-[#1e40af] rounded-2xl rounded-br-sm p-4 shadow-lg w-36 animate-float-fast"
+            style={{ animationDelay: '0.8s' }}
+          >
             <div className="space-y-2">
               <div className="h-2 bg-white/30 rounded w-full" />
               <div className="h-2 bg-white/30 rounded w-2/3" />
@@ -69,7 +87,10 @@ export default function WhappOHeroIllustration() {
           </div>
 
           {/* Chat bubble - Pink (bottom) */}
-          <div className="absolute bottom-8 left-20 bg-[#ec4899] rounded-2xl rounded-bl-sm p-3 shadow-lg w-32 animate-fade-in" style={{ animationDelay: '0.7s' }}>
+          <div 
+            className="absolute bottom-8 left-20 bg-[#ec4899] rounded-2xl rounded-bl-sm p-3 shadow-lg w-32 animate-float-medium"
+            style={{ animationDelay: '1.2s' }}
+          >
             <div className="space-y-2">
               <div className="h-2 bg-white/40 rounded w-full" />
               <div className="h-2 bg-white/40 rounded w-1/2" />
@@ -77,7 +98,10 @@ export default function WhappOHeroIllustration() {
           </div>
 
           {/* Small floating chat bubble - Light Blue */}
-          <div className="absolute top-56 right-48 bg-[#38bdf8] rounded-xl rounded-br-sm p-3 shadow-md w-28 animate-fade-in" style={{ animationDelay: '0.8s' }}>
+          <div 
+            className="absolute top-56 right-48 bg-[#38bdf8] rounded-xl rounded-br-sm p-3 shadow-md w-28 animate-float-slow"
+            style={{ animationDelay: '1.8s' }}
+          >
             <div className="space-y-1.5">
               <div className="h-1.5 bg-white/40 rounded w-full" />
               <div className="h-1.5 bg-white/40 rounded w-2/3" />
