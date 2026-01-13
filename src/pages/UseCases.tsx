@@ -255,6 +255,18 @@ export default function UseCases() {
         </div>
       </section>
 
+      {/* Quote Section */}
+      <section className="py-10 md:py-14">
+        <div className="container mx-auto px-6">
+          <div className="max-w-3xl mx-auto text-center">
+            <p className="text-lg md:text-xl text-accent font-medium italic mb-4">
+              "We were especially impressed with the short deployment time, the system's accuracy, as well as with Axiobit's team relentless support throughout the whole project."
+            </p>
+            <p className="text-base text-foreground font-semibold">Liviu Balanici, Group CEO</p>
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="py-10 md:py-14">
         <div className="container mx-auto px-6">
