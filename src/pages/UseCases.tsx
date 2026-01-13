@@ -104,7 +104,7 @@ export default function UseCases() {
               </div>
             </div>
             <div className="h-6 w-px bg-border hidden sm:block" />
-            <p className="text-muted-foreground text-sm max-w-xl">{agroPanCaseStudy.tagline}</p>
+            <p className="text-muted-foreground text-base max-w-xl text-left">{agroPanCaseStudy.tagline}</p>
           </div>
         </div>
       </section>
