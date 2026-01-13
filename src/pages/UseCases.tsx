@@ -159,77 +159,76 @@ export default function UseCases() {
         </div>
       </section>
 
-      {/* The Solution */}
+      {/* The Solution & Impact - Side by Side */}
       <section className="py-10 md:py-14">
         <div className="container mx-auto px-6">
-          <div className="max-w-4xl">
-            <div className="flex items-center gap-3 mb-4">
-              <div className="p-1.5 rounded-lg bg-primary/10">
-                <Zap className="h-4 w-4 text-primary" />
-              </div>
-              <h2 className="text-xl md:text-2xl font-bold text-foreground">The Solution</h2>
-            </div>
-            
-            <p className="text-base text-foreground mb-3">{agroPanCaseStudy.solution.intro}</p>
-            <p className="text-sm text-muted-foreground mb-4">{agroPanCaseStudy.solution.context}</p>
-            
-            <div className="space-y-2 mb-5">
-              {agroPanCaseStudy.solution.points.map((point, index) => (
-                <div key={index} className="flex items-start gap-2 p-3 rounded-lg bg-primary/5 border border-primary/10">
-                  <div className="h-5 w-5 rounded-full bg-primary/20 flex items-center justify-center shrink-0">
-                    <span className="text-xs font-bold text-primary">{index + 1}</span>
-                  </div>
-                  <span className="text-sm text-foreground">{point}</span>
+          <div className="grid lg:grid-cols-2 gap-8">
+            {/* The Solution - Left */}
+            <div>
+              <div className="flex items-center gap-3 mb-4">
+                <div className="p-1.5 rounded-lg bg-primary/10">
+                  <Zap className="h-4 w-4 text-primary" />
                 </div>
-              ))}
-            </div>
-            
-            <p className="text-base font-semibold text-accent">{agroPanCaseStudy.solution.closing}</p>
-          </div>
-        </div>
-      </section>
-
-      {/* The Impact */}
-      <section className="py-10 md:py-14 bg-navy-light">
-        <div className="container mx-auto px-6">
-          <div className="max-w-5xl">
-            <div className="flex items-center gap-3 mb-5">
-              <div className="p-1.5 rounded-lg bg-emerald-500/10">
-                <TrendingDown className="h-4 w-4 text-emerald-500" />
-              </div>
-              <h2 className="text-xl md:text-2xl font-bold text-foreground">The Impact</h2>
-            </div>
-            
-            <div className="grid lg:grid-cols-2 gap-5">
-              {/* Operational Metrics */}
-              <div className="enterprise-card p-4">
-                <div className="flex items-center gap-2 mb-4">
-                  <Clock className="h-4 w-4 text-primary" />
-                  <h3 className="font-semibold text-foreground text-sm">Operational Metrics</h3>
-                </div>
-                <div className="grid grid-cols-2 gap-3">
-                  {agroPanCaseStudy.impact.operational.map((item, index) => (
-                    <div key={index} className="p-3 rounded-lg bg-background">
-                      <div className="text-lg font-bold text-primary mb-0.5">{item.metric}</div>
-                      <div className="text-xs text-muted-foreground">{item.label}</div>
-                    </div>
-                  ))}
-                </div>
+                <h2 className="text-xl md:text-2xl font-bold text-foreground">The Solution</h2>
               </div>
               
-              {/* Business Outcomes */}
-              <div className="enterprise-card p-4">
-                <div className="flex items-center gap-2 mb-4">
-                  <DollarSign className="h-4 w-4 text-emerald-500" />
-                  <h3 className="font-semibold text-foreground text-sm">Business Outcomes</h3>
-                </div>
-                <div className="grid grid-cols-2 gap-3">
-                  {agroPanCaseStudy.impact.business.map((item, index) => (
-                    <div key={index} className="p-3 rounded-lg bg-background">
-                      <div className="text-lg font-bold text-emerald-500 mb-0.5">{item.metric}</div>
-                      <div className="text-xs text-muted-foreground">{item.label}</div>
+              <p className="text-base text-foreground mb-3">{agroPanCaseStudy.solution.intro}</p>
+              <p className="text-sm text-muted-foreground mb-4">{agroPanCaseStudy.solution.context}</p>
+              
+              <div className="space-y-2 mb-5">
+                {agroPanCaseStudy.solution.points.map((point, index) => (
+                  <div key={index} className="flex items-start gap-2 p-3 rounded-lg bg-primary/5 border border-primary/10">
+                    <div className="h-5 w-5 rounded-full bg-primary/20 flex items-center justify-center shrink-0">
+                      <span className="text-xs font-bold text-primary">{index + 1}</span>
                     </div>
-                  ))}
+                    <span className="text-sm text-foreground">{point}</span>
+                  </div>
+                ))}
+              </div>
+              
+              <p className="text-base font-semibold text-accent">{agroPanCaseStudy.solution.closing}</p>
+            </div>
+
+            {/* The Impact - Right */}
+            <div>
+              <div className="flex items-center gap-3 mb-4">
+                <div className="p-1.5 rounded-lg bg-emerald-500/10">
+                  <TrendingDown className="h-4 w-4 text-emerald-500" />
+                </div>
+                <h2 className="text-xl md:text-2xl font-bold text-foreground">The Impact</h2>
+              </div>
+              
+              <div className="space-y-4">
+                {/* Operational Metrics */}
+                <div className="enterprise-card p-4">
+                  <div className="flex items-center gap-2 mb-3">
+                    <Clock className="h-4 w-4 text-primary" />
+                    <h3 className="font-semibold text-foreground text-sm">Operational Metrics</h3>
+                  </div>
+                  <div className="grid grid-cols-2 gap-3">
+                    {agroPanCaseStudy.impact.operational.map((item, index) => (
+                      <div key={index} className="p-3 rounded-lg bg-background">
+                        <div className="text-lg font-bold text-primary mb-0.5">{item.metric}</div>
+                        <div className="text-xs text-muted-foreground">{item.label}</div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+                
+                {/* Business Outcomes */}
+                <div className="enterprise-card p-4">
+                  <div className="flex items-center gap-2 mb-3">
+                    <DollarSign className="h-4 w-4 text-emerald-500" />
+                    <h3 className="font-semibold text-foreground text-sm">Business Outcomes</h3>
+                  </div>
+                  <div className="grid grid-cols-2 gap-3">
+                    {agroPanCaseStudy.impact.business.map((item, index) => (
+                      <div key={index} className="p-3 rounded-lg bg-background">
+                        <div className="text-lg font-bold text-emerald-500 mb-0.5">{item.metric}</div>
+                        <div className="text-xs text-muted-foreground">{item.label}</div>
+                      </div>
+                    ))}
+                  </div>
                 </div>
               </div>
             </div>
