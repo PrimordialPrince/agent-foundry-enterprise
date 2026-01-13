@@ -164,8 +164,8 @@ export default function UseCases() {
         <div className="container mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-8">
             {/* The Solution - Left */}
-            <div>
-              <div className="flex items-center gap-3 mb-4">
+            <div className="text-center">
+              <div className="flex items-center justify-center gap-3 mb-4">
                 <div className="p-1.5 rounded-lg bg-primary/10">
                   <Zap className="h-4 w-4 text-primary" />
                 </div>
@@ -177,7 +177,7 @@ export default function UseCases() {
               
               <div className="space-y-2 mb-5">
                 {agroPanCaseStudy.solution.points.map((point, index) => (
-                  <div key={index} className="flex items-start gap-2 p-3 rounded-lg bg-primary/5 border border-primary/10">
+                  <div key={index} className="flex items-center justify-center gap-2 p-3 rounded-lg bg-primary/5 border border-primary/10">
                     <div className="h-5 w-5 rounded-full bg-primary/20 flex items-center justify-center shrink-0">
                       <span className="text-xs font-bold text-primary">{index + 1}</span>
                     </div>
@@ -190,8 +190,8 @@ export default function UseCases() {
             </div>
 
             {/* The Impact - Right */}
-            <div>
-              <div className="flex items-center gap-3 mb-4">
+            <div className="text-center">
+              <div className="flex items-center justify-center gap-3 mb-4">
                 <div className="p-1.5 rounded-lg bg-emerald-500/10">
                   <TrendingDown className="h-4 w-4 text-emerald-500" />
                 </div>
@@ -201,13 +201,13 @@ export default function UseCases() {
               <div className="space-y-4">
                 {/* Operational Metrics */}
                 <div className="enterprise-card p-4">
-                  <div className="flex items-center gap-2 mb-3">
+                  <div className="flex items-center justify-center gap-2 mb-3">
                     <Clock className="h-4 w-4 text-primary" />
                     <h3 className="font-semibold text-foreground text-sm">Operational Metrics</h3>
                   </div>
                   <div className="grid grid-cols-2 gap-3">
                     {agroPanCaseStudy.impact.operational.map((item, index) => (
-                      <div key={index} className="p-3 rounded-lg bg-background">
+                      <div key={index} className="p-3 rounded-lg bg-background text-center">
                         <div className="text-lg font-bold text-primary mb-0.5">{item.metric}</div>
                         <div className="text-xs text-muted-foreground">{item.label}</div>
                       </div>
@@ -217,13 +217,13 @@ export default function UseCases() {
                 
                 {/* Business Outcomes */}
                 <div className="enterprise-card p-4">
-                  <div className="flex items-center gap-2 mb-3">
+                  <div className="flex items-center justify-center gap-2 mb-3">
                     <DollarSign className="h-4 w-4 text-emerald-500" />
                     <h3 className="font-semibold text-foreground text-sm">Business Outcomes</h3>
                   </div>
                   <div className="grid grid-cols-2 gap-3">
                     {agroPanCaseStudy.impact.business.map((item, index) => (
-                      <div key={index} className="p-3 rounded-lg bg-background">
+                      <div key={index} className="p-3 rounded-lg bg-background text-center">
                         <div className="text-lg font-bold text-emerald-500 mb-0.5">{item.metric}</div>
                         <div className="text-xs text-muted-foreground">{item.label}</div>
                       </div>
