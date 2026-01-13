@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { ArrowRight, ArrowLeft, TrendingDown, Clock, Target, DollarSign, Users, Zap, CheckCircle2 } from "lucide-react";
+import { ArrowRight, ArrowLeft, CheckCircle2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import agroPanLogo from "@/assets/agropan-logo.png";
 
@@ -113,12 +113,7 @@ export default function UseCases() {
       <section className="py-10 md:py-14">
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto text-center">
-            <div className="flex items-center justify-center gap-3 mb-4">
-              <div className="p-1.5 rounded-lg bg-destructive/10">
-                <Target className="h-4 w-4 text-destructive" />
-              </div>
-              <h2 className="text-xl md:text-2xl font-bold text-foreground">The Problem</h2>
-            </div>
+            <h2 className="text-xl md:text-2xl font-bold text-foreground mb-4">The Problem</h2>
             
             <p className="text-base text-foreground mb-3">{agroPanCaseStudy.problem.intro}</p>
             <p className="text-sm text-muted-foreground mb-4">{agroPanCaseStudy.problem.context}</p>
@@ -143,12 +138,7 @@ export default function UseCases() {
       <section className="py-10 md:py-14 bg-navy-light">
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto text-center">
-            <div className="flex items-center justify-center gap-3 mb-4">
-              <div className="p-1.5 rounded-lg bg-amber-500/10">
-                <Zap className="h-4 w-4 text-amber-500" />
-              </div>
-              <h2 className="text-xl md:text-2xl font-bold text-foreground">The Constraint</h2>
-            </div>
+            <h2 className="text-xl md:text-2xl font-bold text-foreground mb-4">The Constraint</h2>
             
             <p className="text-base text-foreground mb-4">{agroPanCaseStudy.constraint.intro}</p>
             
@@ -171,12 +161,7 @@ export default function UseCases() {
             <div className="grid lg:grid-cols-2 gap-8">
               {/* The Solution - Left */}
               <div>
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="p-1.5 rounded-lg bg-primary/10">
-                    <Zap className="h-4 w-4 text-primary" />
-                  </div>
-                  <h2 className="text-xl md:text-2xl font-bold text-foreground">The Solution</h2>
-                </div>
+                <h2 className="text-xl md:text-2xl font-bold text-foreground mb-4">The Solution</h2>
                 
                 <p className="text-base text-foreground mb-3">{agroPanCaseStudy.solution.intro}</p>
                 <p className="text-sm text-muted-foreground mb-4">{agroPanCaseStudy.solution.context}</p>
@@ -197,20 +182,12 @@ export default function UseCases() {
 
               {/* The Impact - Right */}
               <div>
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="p-1.5 rounded-lg bg-emerald-500/10">
-                    <TrendingDown className="h-4 w-4 text-emerald-500" />
-                  </div>
-                  <h2 className="text-xl md:text-2xl font-bold text-foreground">The Impact</h2>
-                </div>
+                <h2 className="text-xl md:text-2xl font-bold text-foreground mb-4">The Impact</h2>
                 
                 <div className="space-y-4">
                   {/* Operational Metrics */}
                   <div className="enterprise-card p-4">
-                    <div className="flex items-center gap-2 mb-3">
-                      <Clock className="h-4 w-4 text-primary" />
-                      <h3 className="font-semibold text-foreground text-sm">Operational Metrics</h3>
-                    </div>
+                    <h3 className="font-semibold text-foreground text-sm mb-3">Operational Metrics</h3>
                     <div className="grid grid-cols-2 gap-3">
                       {agroPanCaseStudy.impact.operational.map((item, index) => (
                         <div key={index} className="p-3 rounded-lg bg-background">
@@ -223,10 +200,7 @@ export default function UseCases() {
                   
                   {/* Business Outcomes */}
                   <div className="enterprise-card p-4">
-                    <div className="flex items-center gap-2 mb-3">
-                      <DollarSign className="h-4 w-4 text-emerald-500" />
-                      <h3 className="font-semibold text-foreground text-sm">Business Outcomes</h3>
-                    </div>
+                    <h3 className="font-semibold text-foreground text-sm mb-3">Business Outcomes</h3>
                     <div className="grid grid-cols-2 gap-3">
                       {agroPanCaseStudy.impact.business.map((item, index) => (
                         <div key={index} className="p-3 rounded-lg bg-background">
@@ -265,12 +239,7 @@ export default function UseCases() {
       <section className="py-10 md:py-14 bg-navy-light">
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto text-center">
-            <div className="flex items-center justify-center gap-3 mb-4">
-              <div className="p-1.5 rounded-lg bg-primary/10">
-                <Users className="h-4 w-4 text-primary" />
-              </div>
-              <h2 className="text-xl md:text-2xl font-bold text-foreground">Axiobit's Role</h2>
-            </div>
+            <h2 className="text-xl md:text-2xl font-bold text-foreground mb-4">Axiobit's Role</h2>
             
             <p className="text-base text-foreground mb-4">{agroPanCaseStudy.axiobitRole.intro}</p>
             
