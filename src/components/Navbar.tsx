@@ -13,10 +13,10 @@ const agents = [
 const navigation = [
   { name: "About", href: "/about" },
   { name: "Agents", href: "/agents", hasDropdown: true },
+  { name: "Use Cases", href: "/use-cases" },
   { name: "Our Proprietary Framework", href: "/framework" },
   { name: "Resources", href: "/resources" },
   { name: "Contact", href: "/contact" },
-  { name: "Careers", href: "/careers" },
 ];
 
 export function Navbar() {
