@@ -128,7 +128,7 @@ export default function UseCases() {
             </ul>
             
             <div className="p-4 rounded-lg bg-accent/5 border border-accent/20 max-w-2xl mx-auto">
-              <p className="text-sm text-foreground font-medium">{agroPanCaseStudy.problem.critical}</p>
+              <p className="text-base text-foreground font-medium">{agroPanCaseStudy.problem.critical}</p>
             </div>
           </div>
         </div>
@@ -146,7 +146,7 @@ export default function UseCases() {
               {agroPanCaseStudy.constraint.points.map((point, index) => (
                 <div key={index} className="flex items-center gap-2 p-3 rounded-lg bg-background border border-border text-left">
                   <CheckCircle2 className="h-4 w-4 text-primary shrink-0" />
-                  <span className="text-sm text-foreground">{point}</span>
+                  <span className="text-base text-foreground">{point}</span>
                 </div>
               ))}
             </div>
@@ -164,7 +164,7 @@ export default function UseCases() {
                 <h2 className="text-xl md:text-2xl font-bold text-foreground mb-4">The Solution</h2>
                 
                 <p className="text-base text-foreground mb-3">{agroPanCaseStudy.solution.intro}</p>
-                <p className="text-sm text-muted-foreground mb-4">{agroPanCaseStudy.solution.context}</p>
+                <p className="text-base text-foreground mb-4">{agroPanCaseStudy.solution.context}</p>
                 
                 <div className="space-y-2 mb-5">
                   {agroPanCaseStudy.solution.points.map((point, index) => (
@@ -172,7 +172,7 @@ export default function UseCases() {
                       <div className="h-5 w-5 rounded-full bg-primary/20 flex items-center justify-center shrink-0">
                         <span className="text-xs font-bold text-primary">{index + 1}</span>
                       </div>
-                      <span className="text-sm text-foreground">{point}</span>
+                      <span className="text-base text-foreground">{point}</span>
                     </div>
                   ))}
                 </div>
@@ -187,12 +187,12 @@ export default function UseCases() {
                 <div className="space-y-4">
                   {/* Operational Metrics */}
                   <div className="enterprise-card p-4">
-                    <h3 className="font-semibold text-foreground text-sm mb-3">Operational Metrics</h3>
+                    <h3 className="font-semibold text-foreground text-base mb-3">Operational Metrics</h3>
                     <div className="grid grid-cols-2 gap-3">
                       {agroPanCaseStudy.impact.operational.map((item, index) => (
                         <div key={index} className="p-3 rounded-lg bg-background">
                           <div className="text-lg font-bold text-primary mb-0.5">{item.metric}</div>
-                          <div className="text-xs text-muted-foreground">{item.label}</div>
+                          <div className="text-base text-muted-foreground">{item.label}</div>
                         </div>
                       ))}
                     </div>
@@ -200,12 +200,12 @@ export default function UseCases() {
                   
                   {/* Business Outcomes */}
                   <div className="enterprise-card p-4">
-                    <h3 className="font-semibold text-foreground text-sm mb-3">Business Outcomes</h3>
+                    <h3 className="font-semibold text-foreground text-base mb-3">Business Outcomes</h3>
                     <div className="grid grid-cols-2 gap-3">
                       {agroPanCaseStudy.impact.business.map((item, index) => (
                         <div key={index} className="p-3 rounded-lg bg-background">
                           <div className="text-lg font-bold text-emerald-500 mb-0.5">{item.metric}</div>
-                          <div className="text-xs text-muted-foreground">{item.label}</div>
+                          <div className="text-base text-muted-foreground">{item.label}</div>
                         </div>
                       ))}
                     </div>
@@ -224,7 +224,7 @@ export default function UseCases() {
             <h2 className="text-xl md:text-2xl font-bold text-foreground mb-4">Why This Matters</h2>
             
             <p className="text-base text-foreground mb-3">{agroPanCaseStudy.whyItMatters.intro}</p>
-            <p className="text-sm text-muted-foreground mb-5">{agroPanCaseStudy.whyItMatters.body}</p>
+            <p className="text-base text-foreground mb-5">{agroPanCaseStudy.whyItMatters.body}</p>
             
             <blockquote className="p-4 rounded-lg bg-accent/10 border-l-4 border-accent max-w-2xl mx-auto text-left">
               <p className="text-base font-semibold text-foreground italic">
@@ -247,7 +247,7 @@ export default function UseCases() {
               {agroPanCaseStudy.axiobitRole.points.map((point, index) => (
                 <li key={index} className="flex items-start gap-2">
                   <CheckCircle2 className="h-4 w-4 text-primary shrink-0 mt-0.5" />
-                  <span className="text-sm text-foreground">{point}</span>
+                  <span className="text-base text-foreground">{point}</span>
                 </li>
               ))}
             </ul>
@@ -262,7 +262,7 @@ export default function UseCases() {
         <div className="container mx-auto px-6">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-xl md:text-2xl font-bold text-foreground mb-3">Ready to Transform Your Operations?</h2>
-            <p className="text-sm text-muted-foreground mb-5">
+            <p className="text-base text-muted-foreground mb-5">
               See how our AI agents can deliver similar results for your organization.
             </p>
             <div className="flex flex-wrap items-center justify-center gap-3">
