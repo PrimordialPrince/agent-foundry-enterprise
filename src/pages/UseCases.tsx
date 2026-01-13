@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { ArrowRight, ArrowLeft, TrendingDown, Clock, Target, DollarSign, Users, Zap, CheckCircle2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import agroPanLogo from "@/assets/agropan-logo.png";
 
 const agroPanCaseStudy = {
   client: "AgroPan",
@@ -92,9 +93,11 @@ export default function UseCases() {
           
           <div className="mt-5 flex flex-wrap items-center justify-center gap-4">
             <div className="flex items-center gap-3">
-              <div className="h-10 w-10 rounded-lg bg-primary/10 flex items-center justify-center">
-                <span className="text-base font-bold text-primary">A</span>
-              </div>
+              <img 
+                src={agroPanLogo} 
+                alt="AgroPan" 
+                className="h-10 w-10 rounded-lg object-cover"
+              />
               <div className="text-left">
                 <p className="font-semibold text-foreground text-sm">{agroPanCaseStudy.client}</p>
                 <p className="text-xs text-muted-foreground">{agroPanCaseStudy.industry}</p>
