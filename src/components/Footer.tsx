@@ -18,7 +18,7 @@ const footerLinks = {
   resources: [
     { name: "Documentation", href: "/resources" },
     { name: "Case Studies", href: "/case-studies" },
-    { name: "Blog", href: "/resources" },
+    { name: "Use Cases", href: "/use-cases" },
     { name: "Whitepapers", href: "/resources" },
   ],
   company: [

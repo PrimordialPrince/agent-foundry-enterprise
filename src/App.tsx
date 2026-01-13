@@ -12,6 +12,7 @@ import YCarbon from "./pages/YCarbon";
 import Arheion from "./pages/Arheion";
 import Framework from "./pages/Framework";
 import CaseStudies from "./pages/CaseStudies";
+import UseCases from "./pages/UseCases";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Resources from "./pages/Resources";
@@ -38,6 +39,7 @@ const App = () => (
           <Route path="/agents/arheion" element={<Arheion />} />
           <Route path="/framework" element={<Framework />} />
           <Route path="/case-studies" element={<CaseStudies />} />
+          <Route path="/use-cases" element={<UseCases />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/resources" element={<Resources />} />
