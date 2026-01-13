@@ -109,44 +109,45 @@ export default function UseCases() {
         </div>
       </section>
 
-      {/* The Problem */}
+      {/* The Problem & The Constraint - Side by Side */}
       <section className="py-10 md:py-14">
         <div className="container mx-auto px-6">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-xl md:text-2xl font-bold text-foreground mb-4">The Problem</h2>
-            
-            <p className="text-base text-foreground mb-3">{agroPanCaseStudy.problem.intro}</p>
-            <p className="text-base font-semibold text-foreground mb-4">{agroPanCaseStudy.problem.context}</p>
-            
-            <ul className="space-y-2 mb-5 inline-block text-left">
-              {agroPanCaseStudy.problem.points.map((point, index) => (
-                <li key={index} className="flex items-start gap-2">
-                  <div className="mt-1.5 h-1.5 w-1.5 rounded-full bg-destructive/60 shrink-0" />
-                  <span className="text-base text-foreground">{point}</span>
-                </li>
-              ))}
-            </ul>
-            
-            <p className="text-base text-accent font-medium max-w-2xl mx-auto">{agroPanCaseStudy.problem.critical}</p>
-          </div>
-        </div>
-      </section>
+          <div className="max-w-5xl mx-auto">
+            <div className="grid lg:grid-cols-2 gap-8">
+              {/* The Problem - Left */}
+              <div>
+                <h2 className="text-xl md:text-2xl font-bold text-foreground mb-4">The Problem</h2>
+                
+                <p className="text-base text-foreground mb-3">{agroPanCaseStudy.problem.intro}</p>
+                <p className="text-base font-semibold text-foreground mb-4">{agroPanCaseStudy.problem.context}</p>
+                
+                <ul className="space-y-2 mb-5">
+                  {agroPanCaseStudy.problem.points.map((point, index) => (
+                    <li key={index} className="flex items-start gap-2">
+                      <div className="mt-1.5 h-1.5 w-1.5 rounded-full bg-destructive/60 shrink-0" />
+                      <span className="text-base text-foreground">{point}</span>
+                    </li>
+                  ))}
+                </ul>
+                
+                <p className="text-base text-accent font-medium">{agroPanCaseStudy.problem.critical}</p>
+              </div>
 
-      {/* The Constraint */}
-      <section className="py-10 md:py-14 bg-navy-light">
-        <div className="container mx-auto px-6">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-xl md:text-2xl font-bold text-foreground mb-4">The Constraint</h2>
-            
-            <p className="text-base text-foreground mb-4">{agroPanCaseStudy.constraint.intro}</p>
-            
-            <div className="grid sm:grid-cols-2 gap-3 max-w-2xl mx-auto">
-              {agroPanCaseStudy.constraint.points.map((point, index) => (
-                <div key={index} className="flex items-center gap-2 p-3 rounded-lg bg-background border border-border text-left">
-                  <CheckCircle2 className="h-4 w-4 text-primary shrink-0" />
-                  <span className="text-base text-foreground">{point}</span>
+              {/* The Constraint - Right */}
+              <div>
+                <h2 className="text-xl md:text-2xl font-bold text-foreground mb-4">The Constraint</h2>
+                
+                <p className="text-base text-foreground mb-4">{agroPanCaseStudy.constraint.intro}</p>
+                
+                <div className="space-y-3">
+                  {agroPanCaseStudy.constraint.points.map((point, index) => (
+                    <div key={index} className="flex items-center gap-2 p-3 rounded-lg bg-navy-light border border-border">
+                      <CheckCircle2 className="h-4 w-4 text-primary shrink-0" />
+                      <span className="text-base text-foreground">{point}</span>
+                    </div>
+                  ))}
                 </div>
-              ))}
+              </div>
             </div>
           </div>
         </div>
