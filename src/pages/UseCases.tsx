@@ -116,13 +116,13 @@ export default function UseCases() {
             <h2 className="text-xl md:text-2xl font-bold text-foreground mb-4">The Problem</h2>
             
             <p className="text-base text-foreground mb-3">{agroPanCaseStudy.problem.intro}</p>
-            <p className="text-sm text-muted-foreground mb-4">{agroPanCaseStudy.problem.context}</p>
+            <p className="text-base font-semibold text-foreground mb-4">{agroPanCaseStudy.problem.context}</p>
             
             <ul className="space-y-2 mb-5 inline-block text-left">
               {agroPanCaseStudy.problem.points.map((point, index) => (
                 <li key={index} className="flex items-start gap-2">
                   <div className="mt-1.5 h-1.5 w-1.5 rounded-full bg-destructive/60 shrink-0" />
-                  <span className="text-sm text-muted-foreground">{point}</span>
+                  <span className="text-base text-foreground">{point}</span>
                 </li>
               ))}
             </ul>
