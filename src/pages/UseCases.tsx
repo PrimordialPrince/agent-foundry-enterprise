@@ -256,13 +256,21 @@ export default function UseCases() {
       </section>
 
       {/* Quote Section */}
-      <section className="py-10 md:py-14">
+      <section className="py-14 md:py-20">
         <div className="container mx-auto px-6">
-          <div className="max-w-3xl mx-auto text-center">
-            <p className="text-lg md:text-xl text-accent font-medium italic mb-4">
-              "We were especially impressed with the short deployment time, the system's accuracy, as well as with Axiobit's team relentless support throughout the whole project."
+          <div className="max-w-3xl mx-auto text-center relative">
+            {/* Decorative opening quote */}
+            <span className="absolute -top-8 left-1/2 -translate-x-1/2 text-8xl md:text-9xl text-accent/20 font-serif leading-none select-none">"</span>
+            
+            <p className="text-lg md:text-xl text-accent font-medium italic mb-6 relative z-10 pt-6">
+              We were especially impressed with the short deployment time, the system's accuracy, as well as with Axiobit's team relentless support throughout the whole project.
             </p>
-            <p className="text-base text-foreground font-semibold">Liviu Balanici, Group CEO</p>
+            
+            <div className="flex items-center justify-center gap-3">
+              <div className="h-px w-8 bg-accent/40"></div>
+              <p className="text-base text-foreground font-semibold">Liviu Balanici, Group CEO</p>
+              <div className="h-px w-8 bg-accent/40"></div>
+            </div>
           </div>
         </div>
       </section>
