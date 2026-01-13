@@ -159,7 +159,12 @@ export default function UseCases() {
             <div className="grid lg:grid-cols-2 gap-8">
               {/* The Solution - Left */}
               <div>
-                <h2 className="text-xl md:text-2xl font-bold text-foreground mb-4">The Solution</h2>
+                <div className="flex items-center gap-3 mb-4">
+                  <h2 className="text-xl md:text-2xl font-bold text-foreground">The Solution</h2>
+                  <span className="inline-flex items-center px-3 py-1 rounded-full border border-accent/30 bg-accent/5 text-accent text-sm font-medium">
+                    WhappO
+                  </span>
+                </div>
                 
                 <p className="text-base text-foreground mb-3">{agroPanCaseStudy.solution.intro}</p>
                 <p className="text-base text-foreground mb-4">{agroPanCaseStudy.solution.context}</p>
