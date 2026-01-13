@@ -127,9 +127,7 @@ export default function UseCases() {
               ))}
             </ul>
             
-            <div className="p-4 rounded-lg bg-accent/5 border border-accent/20 max-w-2xl mx-auto">
-              <p className="text-base text-foreground font-medium">{agroPanCaseStudy.problem.critical}</p>
-            </div>
+            <p className="text-base text-accent font-medium max-w-2xl mx-auto">{agroPanCaseStudy.problem.critical}</p>
           </div>
         </div>
       </section>
