@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { ArrowRight, ArrowLeft, CheckCircle2 } from "lucide-react";
+import { ArrowRight, ArrowLeft, CheckCircle2, Quote } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import agroPanLogo from "@/assets/agropan-logo.png";
 
@@ -258,11 +258,14 @@ export default function UseCases() {
       {/* Quote Section */}
       <section className="py-14 md:py-20">
         <div className="container mx-auto px-6">
-          <div className="max-w-3xl mx-auto text-center relative">
-            {/* Decorative opening quote */}
-            <span className="absolute -top-8 left-1/2 -translate-x-1/2 text-8xl md:text-9xl text-accent/20 font-serif leading-none select-none">"</span>
+          <div className="max-w-3xl mx-auto text-center relative px-8 md:px-16 py-8">
+            {/* Decorative opening quote - top left */}
+            <Quote className="absolute -top-2 left-0 w-12 h-12 md:w-16 md:h-16 text-accent/20 rotate-180" />
             
-            <p className="text-lg md:text-xl text-accent font-medium italic mb-6 relative z-10 pt-6">
+            {/* Decorative closing quote - bottom right */}
+            <Quote className="absolute -bottom-2 right-0 w-12 h-12 md:w-16 md:h-16 text-accent/20" />
+            
+            <p className="text-lg md:text-xl text-accent font-medium italic mb-6 relative z-10">
               We were especially impressed with the short deployment time, the system's accuracy, as well as with Axiobit's team relentless support throughout the whole project.
             </p>
             
