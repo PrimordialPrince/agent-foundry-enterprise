@@ -78,7 +78,7 @@ export default function UseCases() {
         <div className="container mx-auto px-6 text-center">
           <Link 
             to="/case-studies" 
-            className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-accent transition-colors mb-4"
+            className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-accent transition-colors mb-8"
           >
             <ArrowLeft className="h-4 w-4" />
             Back to Case Studies
