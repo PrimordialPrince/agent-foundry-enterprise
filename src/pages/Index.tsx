@@ -6,9 +6,9 @@ import { HeroIllustration } from "@/components/HeroIllustration";
 import networkGlobeBg from "@/assets/network-globe-bg.png";
 import { useEffect, useState } from "react";
 
-const whappoIcon = "/logos/whappo-logo-mono.png";
-const bizzfuseIcon = "/logos/bizzfuse-logo-mono.png";
-const arheionIcon = "/logos/arheion-logo-mono.png";
+import whappoIcon from "@/assets/whappo-icon.png";
+import bizzfuseIcon from "@/assets/bizzfuse-icon.png";
+import arheionIcon from "@/assets/arheion-icon.png";
 
 const solutions = [
   {
