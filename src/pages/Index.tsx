@@ -16,18 +16,21 @@ const solutions = [
     description: "AI-powered customer engagement that transforms WhatsApp into your most powerful sales and support channel.",
     href: "/agents",
     logo: whappoIcon,
+    accentColor: "indigo" as const,
   },
   {
     title: "Bizzfuse",
     description: "AI-powered business process automation that seamlessly connects your enterprise systems and workflows.",
     href: "/agents",
     logo: bizzfuseIcon,
+    accentColor: "primary" as const,
   },
   {
     title: "Arheion",
     description: "Intelligent document processing and knowledge management that understands your enterprise data.",
     href: "/agents",
     logo: arheionIcon,
+    accentColor: "accent" as const,
   },
 ];
 
@@ -190,6 +193,7 @@ export default function Index() {
                 description={solution.description}
                 href={solution.href}
                 imagePlaceholder={solution.logo}
+                accentColor={solution.accentColor}
                 className="animate-fade-in-up"
                 style={{ animationDelay: `${index * 100}ms` } as React.CSSProperties}
               />
