@@ -6,21 +6,28 @@ import { HeroIllustration } from "@/components/HeroIllustration";
 import networkGlobeBg from "@/assets/network-globe-bg.png";
 import { useEffect, useState } from "react";
 
+import whappoIcon from "@/assets/whappo-icon.png";
+import bizzfuseIcon from "@/assets/bizzfuse-icon.png";
+import arheionIcon from "@/assets/arheion-icon.png";
+
 const solutions = [
   {
     title: "WhappO",
     description: "AI-powered customer engagement that transforms WhatsApp into your most powerful sales and support channel.",
     href: "/agents",
+    logo: whappoIcon,
   },
   {
     title: "Bizzfuse",
     description: "AI-powered business process automation that seamlessly connects your enterprise systems and workflows.",
     href: "/agents",
+    logo: bizzfuseIcon,
   },
   {
     title: "Arheion",
     description: "Intelligent document processing and knowledge management that understands your enterprise data.",
     href: "/agents",
+    logo: arheionIcon,
   },
 ];
 
@@ -182,6 +189,7 @@ export default function Index() {
                 title={solution.title}
                 description={solution.description}
                 href={solution.href}
+                imagePlaceholder={solution.logo}
                 className="animate-fade-in-up"
                 style={{ animationDelay: `${index * 100}ms` } as React.CSSProperties}
               />
