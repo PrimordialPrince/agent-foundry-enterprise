@@ -22,9 +22,9 @@ export default function WhappOHeroIllustration() {
             </div>
           </div>
 
-          {/* Small chat - Cyan (top) */}
+          {/* Small chat - Indigo (top) */}
           <div 
-            className="absolute top-2 left-56 bg-[#06b6d4] rounded-xl rounded-br-sm p-2.5 shadow-md w-24 animate-float-fast"
+            className="absolute top-2 left-56 bg-[#4f46e5] rounded-xl rounded-br-sm p-2.5 shadow-md w-24 animate-float-fast"
             style={{ animationDelay: '0.3s' }}
           >
             <div className="space-y-1.5">
@@ -79,9 +79,9 @@ export default function WhappOHeroIllustration() {
             </div>
           </div>
 
-          {/* Chat bubble - Teal (middle left) */}
+          {/* Chat bubble - Indigo (middle left) */}
           <div 
-            className="absolute top-44 left-16 bg-[#14b8a6] rounded-2xl rounded-bl-sm p-4 shadow-lg w-36 animate-float-medium"
+            className="absolute top-44 left-16 bg-[#6366f1] rounded-2xl rounded-bl-sm p-4 shadow-lg w-36 animate-float-medium"
             style={{ animationDelay: '1.5s' }}
           >
             <div className="space-y-2">
@@ -157,9 +157,9 @@ export default function WhappOHeroIllustration() {
             </div>
           </div>
 
-          {/* Small bubble - Emerald (bottom center-left) */}
+          {/* Small bubble - Indigo Light (bottom center-left) */}
           <div 
-            className="absolute bottom-28 left-24 bg-[#10b981] rounded-xl rounded-bl-sm p-2.5 shadow-md w-28 animate-float-medium"
+            className="absolute bottom-28 left-24 bg-[#818cf8] rounded-xl rounded-bl-sm p-2.5 shadow-md w-28 animate-float-medium"
             style={{ animationDelay: '1.3s' }}
           >
             <div className="space-y-1.5">
