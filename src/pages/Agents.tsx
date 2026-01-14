@@ -3,9 +3,9 @@ import { ArrowRight, CheckCircle, Download } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Section } from "@/components/Section";
 
-import whappoIcon from "@/assets/whappo-icon.png";
-import bizzfuseIcon from "@/assets/bizzfuse-icon.png";
-import arheionIcon from "@/assets/arheion-icon.png";
+const whappoIcon = "/logos/whappo-logo-mono.png";
+const bizzfuseIcon = "/logos/bizzfuse-logo-mono.png";
+const arheionIcon = "/logos/arheion-logo-mono.png";
 
 const agents = [
   {
