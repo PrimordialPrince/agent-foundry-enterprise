@@ -52,9 +52,9 @@ export function SolutionCard({ title, description, imagePlaceholder, href, class
       style={style}
     >
       {/* Image placeholder */}
-      <div className="aspect-[16/10] bg-secondary relative overflow-hidden flex items-center justify-center">
+      <div className="aspect-[16/10] bg-secondary relative overflow-hidden">
         {imagePlaceholder ? (
-          <img src={imagePlaceholder} alt={title} className="max-w-[60%] max-h-[60%] object-contain" />
+          <img src={imagePlaceholder} alt={title} className="w-full h-full object-cover" />
         ) : (
           <div className={cn("absolute inset-0 flex items-center justify-center bg-gradient-to-br", colors.gradient)}>
             <div className={cn("w-20 h-20 rounded-full flex items-center justify-center", colors.circle)}>
