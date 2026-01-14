@@ -6,7 +6,7 @@ import { HeroIllustration } from "@/components/HeroIllustration";
 import networkGlobeBg from "@/assets/network-globe-bg.png";
 import { useEffect, useState } from "react";
 
-import whappoIcon from "@/assets/whappo-icon.png";
+import whappoIcon from "@/assets/whappo-logo-blue.png";
 import bizzfuseIcon from "@/assets/bizzfuse-icon.png";
 import arheionIcon from "@/assets/arheion-icon.png";
 
