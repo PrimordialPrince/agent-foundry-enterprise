@@ -21,9 +21,13 @@ export function SolutionCard({ title, description, imagePlaceholder, href, class
       style={style}
     >
       {/* Image placeholder */}
-      <div className="aspect-[16/10] bg-secondary relative overflow-hidden">
+      <div className="aspect-[16/10] bg-secondary relative overflow-hidden flex items-center justify-center">
         {imagePlaceholder ? (
-          <img src={imagePlaceholder} alt={title} className="w-full h-full object-cover" />
+          <img 
+            src={imagePlaceholder} 
+            alt={title} 
+            className="w-32 h-32 object-contain drop-shadow-[0_8px_24px_rgba(15,167,184,0.3)] group-hover:drop-shadow-[0_12px_32px_rgba(233,30,140,0.4)] transition-all duration-500" 
+          />
         ) : (
           <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-primary/10 to-accent/5">
             <div className="w-20 h-20 rounded-full bg-primary/20 flex items-center justify-center">
