@@ -1,36 +1,55 @@
 import { Link } from "react-router-dom";
 import { ArrowRight, CheckCircle, MessageSquare, Mail, Phone, Mic, Shield } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import WhappOHeroIllustration from "@/components/WhappOHeroIllustration";
+import whappoLogo from "@/assets/whappo-logo-blue.png";
 
 export default function WhappO() {
   return (
     <main className="flex flex-col">
-      {/* Hero Section - Full bleed with static illustration */}
-      <section className="relative min-h-screen flex items-center overflow-hidden">
-        {/* Static Illustration Background */}
-        <WhappOHeroIllustration />
-
+      {/* Hero Section - Full bleed with logo */}
+      <section className="relative min-h-screen flex items-center overflow-hidden bg-gradient-to-br from-slate-50 via-white to-indigo-50">
+        {/* Subtle background pattern */}
+        <div className="absolute inset-0 opacity-[0.03]" style={{ 
+          backgroundImage: `radial-gradient(circle at 1px 1px, rgb(99, 102, 241) 1px, transparent 0)`,
+          backgroundSize: '40px 40px'
+        }} />
+        
         <div className="relative z-10 container mx-auto px-6 pt-32 pb-20">
-          <div className="max-w-4xl">
-            <h1 className="font-serif text-5xl md:text-6xl lg:text-7xl text-white font-medium leading-[1.05] mb-8">
-              Turn conversations<br />
-              <span className="text-indigo-400">into workflows.</span>
-            </h1>
-            <p className="text-xl lg:text-2xl text-white/90 leading-relaxed mb-10 max-w-2xl">
-              Only WhappO interprets natural language with enterprise precision—transforming WhatsApp, email, SMS, and voice into structured business intelligence.
-            </p>
-            <div className="flex flex-wrap gap-4">
-              <Link to="/contact">
-                <Button variant="enterprise" size="lg" className="text-base px-8 py-6">
-                  Request a demo
-                </Button>
-              </Link>
-              <Link to="/contact">
-                <Button variant="outline" size="lg" className="text-base px-8 py-6 bg-white/80 hover:bg-white border-navy/20 text-navy">
-                  Contact sales
-                </Button>
-              </Link>
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+            {/* Left - Text content */}
+            <div>
+              <h1 className="font-serif text-5xl md:text-6xl lg:text-7xl text-navy font-medium leading-[1.05] mb-8">
+                Turn conversations<br />
+                <span className="text-indigo-500">into workflows.</span>
+              </h1>
+              <p className="text-xl lg:text-2xl text-navy/70 leading-relaxed mb-10 max-w-2xl">
+                Only WhappO interprets natural language with enterprise precision—transforming WhatsApp, email, SMS, and voice into structured business intelligence.
+              </p>
+              <div className="flex flex-wrap gap-4">
+                <Link to="/contact">
+                  <Button variant="enterprise" size="lg" className="text-base px-8 py-6">
+                    Request a demo
+                  </Button>
+                </Link>
+                <Link to="/contact">
+                  <Button variant="outline" size="lg" className="text-base px-8 py-6 border-navy/20 text-navy hover:bg-navy/5">
+                    Contact sales
+                  </Button>
+                </Link>
+              </div>
+            </div>
+            
+            {/* Right - Logo display */}
+            <div className="flex items-center justify-center lg:justify-end">
+              <div className="relative">
+                {/* Glow effect behind logo */}
+                <div className="absolute inset-0 blur-3xl bg-gradient-to-br from-indigo-400/30 via-blue-400/20 to-transparent rounded-full scale-110" />
+                <img 
+                  src={whappoLogo} 
+                  alt="WhappO Logo" 
+                  className="relative w-72 md:w-96 lg:w-[28rem] h-auto drop-shadow-2xl"
+                />
+              </div>
             </div>
           </div>
         </div>
