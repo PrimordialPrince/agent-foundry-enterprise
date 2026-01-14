@@ -52,9 +52,9 @@ export default function Agents() {
         <Section key={agent.id} className={index % 2 === 0 ? "" : "section-gradient"}>
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className={index % 2 === 1 ? "lg:order-2" : ""}>
-              <div className="relative inline-block mb-6 group/logo">
-                <div className="p-4 rounded-2xl bg-gradient-to-br from-primary/10 to-accent/5 shadow-[0_8px_32px_rgba(15,167,184,0.2)] hover:shadow-[0_12px_40px_rgba(233,30,140,0.3)] transition-all duration-500">
-                  <img src={agent.logo} alt={`${agent.name} logo`} className="h-20 w-20 object-contain drop-shadow-[0_4px_12px_rgba(15,167,184,0.4)] group-hover/logo:drop-shadow-[0_8px_20px_rgba(233,30,140,0.5)] transition-all duration-500" />
+              <div className="relative inline-block mb-6 group">
+                <div className="p-2 rounded-xl bg-primary/10">
+                  <img src={agent.logo} alt={`${agent.name} logo`} className="h-16 w-16 object-contain" />
                 </div>
                 <button
                   onClick={() => handleDownload(agent.logo, agent.name)}
