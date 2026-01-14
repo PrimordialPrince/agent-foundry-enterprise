@@ -15,7 +15,7 @@ export default function WhappO() {
           <div className="max-w-4xl">
             <h1 className="font-serif text-5xl md:text-6xl lg:text-7xl text-white font-medium leading-[1.05] mb-8">
               Turn conversations<br />
-              <span className="text-primary">into workflows.</span>
+              <span className="text-indigo-400">into workflows.</span>
             </h1>
             <p className="text-xl lg:text-2xl text-white/90 leading-relaxed mb-10 max-w-2xl">
               Only WhappO interprets natural language with enterprise precision—transforming WhatsApp, email, SMS, and voice into structured business intelligence.
@@ -62,7 +62,7 @@ export default function WhappO() {
           <div className="grid lg:grid-cols-3 gap-8">
             {/* Channels */}
             <div className="bg-navy/50 border border-border rounded-2xl p-8">
-              <h3 className="text-sm font-semibold text-primary uppercase tracking-wider mb-6">Channels</h3>
+              <h3 className="text-sm font-semibold text-indigo-400 uppercase tracking-wider mb-6">Channels</h3>
               <div className="space-y-4">
                 {[
                   { icon: MessageSquare, name: "WhatsApp Business" },
@@ -71,8 +71,8 @@ export default function WhappO() {
                   { icon: Mic, name: "Voice Transcripts" },
                 ].map((ch) => (
                   <div key={ch.name} className="flex items-center gap-3">
-                    <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
-                      <ch.icon className="h-5 w-5 text-primary" />
+                    <div className="w-10 h-10 rounded-lg bg-indigo-500/10 flex items-center justify-center">
+                      <ch.icon className="h-5 w-5 text-indigo-400" />
                     </div>
                     <span className="text-foreground">{ch.name}</span>
                   </div>
@@ -82,7 +82,7 @@ export default function WhappO() {
 
             {/* Capabilities */}
             <div className="bg-navy/50 border border-border rounded-2xl p-8">
-              <h3 className="text-sm font-semibold text-primary uppercase tracking-wider mb-6">Capabilities</h3>
+              <h3 className="text-sm font-semibold text-indigo-400 uppercase tracking-wider mb-6">Capabilities</h3>
               <ul className="space-y-3">
                 {[
                   "Intent recognition & entity extraction",
@@ -92,7 +92,7 @@ export default function WhappO() {
                   "ERP/CRM/BPM integration",
                 ].map((item) => (
                   <li key={item} className="flex items-start gap-3">
-                    <CheckCircle className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
+                    <CheckCircle className="h-5 w-5 text-indigo-400 flex-shrink-0 mt-0.5" />
                     <span className="text-muted-foreground text-sm">{item}</span>
                   </li>
                 ))}
@@ -101,7 +101,7 @@ export default function WhappO() {
 
             {/* Performance */}
             <div className="bg-navy/50 border border-border rounded-2xl p-8">
-              <h3 className="text-sm font-semibold text-primary uppercase tracking-wider mb-6">Performance</h3>
+              <h3 className="text-sm font-semibold text-indigo-400 uppercase tracking-wider mb-6">Performance</h3>
               <div className="space-y-6">
                 {[
                   { value: "85%", label: "Auto-resolution rate" },
@@ -111,7 +111,7 @@ export default function WhappO() {
                 ].map((stat) => (
                   <div key={stat.label} className="flex items-baseline justify-between border-b border-border/50 pb-3">
                     <span className="text-muted-foreground text-sm">{stat.label}</span>
-                    <span className="text-2xl font-bold text-primary">{stat.value}</span>
+                    <span className="text-2xl font-bold text-indigo-400">{stat.value}</span>
                   </div>
                 ))}
               </div>
@@ -130,7 +130,7 @@ export default function WhappO() {
               <div className="flex flex-wrap items-center gap-4 mb-6">
                 {["SOC 2 Type II", "GDPR Compliant", "Enterprise SLA", "SSO Support"].map((badge) => (
                   <div key={badge} className="flex items-center gap-2 px-4 py-2 bg-secondary/50 rounded-full border border-border">
-                    <Shield className="h-4 w-4 text-primary" />
+                    <Shield className="h-4 w-4 text-indigo-400" />
                     <span className="text-sm text-foreground">{badge}</span>
                   </div>
                 ))}
@@ -146,7 +146,7 @@ export default function WhappO() {
             </div>
 
             {/* CTA Card */}
-            <div className="bg-gradient-to-br from-primary/10 via-primary/5 to-transparent border border-primary/20 rounded-2xl p-8">
+            <div className="bg-gradient-to-br from-indigo-500/10 via-indigo-500/5 to-transparent border border-indigo-500/20 rounded-2xl p-8">
               <h2 className="font-serif text-2xl lg:text-3xl text-foreground mb-4">
                 Ready to automate your conversations?
               </h2>
@@ -166,7 +166,7 @@ export default function WhappO() {
                 </Link>
               </div>
               <p className="text-xs text-muted-foreground mt-4">
-                Built on <Link to="/framework" className="text-primary hover:underline">InferenceAI</Link> — our proprietary enterprise AI framework
+                Built on <Link to="/framework" className="text-indigo-400 hover:underline">InferenceAI</Link> — our proprietary enterprise AI framework
               </p>
             </div>
           </div>
